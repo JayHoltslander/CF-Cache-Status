@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Materialize - Cloudflare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <nav class="navbar white">
+  <div class="nav-wrapper">
+    <div class="row">
+      <div class="col s12">
+        <a href="https://codepen.io/collection/nbBqgY" target="_blank" class="brand-logo truncate">
+					<svg class="cache-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M11.243 10.987h1.11v1.11h-1.11zM11.243 6.185h1.11v1.11h-1.11z"></path><path d="M14.523 4.848a1.033 1.033 0 0 0-.112-.429H14.4l-2.136-2.768H3.745L1.58 4.419h.015a.9.9 0 0 0-.117.43v3.785a.914.914 0 0 0 .155.508.914.914 0 0 0-.154.506v3.785a.915.915 0 0 0 .914.914h11.215a.915.915 0 0 0 .914-.914V9.649a1.168 1.168 0 0 0-.149-.517.907.907 0 0 0 .149-.5zm-1.092 8.407H2.571V9.827h10.86zm0-4.8H2.571V5.026h10.86z"></path></svg>
+					CF-Cache-Status
+				</a>
+        <ul class="right">
+          <li><a href="https://s.codepen.io/j_holtslander/fullpage/mjgoXY" target="_blank"><i class="material-icons">fullscreen</i><span class="hide-on-small-only"> Fullscreen</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+	<nav class="search-bar z-depth-0">
+		<div class="container">
+			<div class="nav-wrapper">
+				<form>
+						<div class="input-field">
+							<input id="search" type="search" required placeholder="Resource URL to check" autocomplete="off">
+							<label class="label-icon" for="search"><i class="material-icons">search</i></label>
+							<i class="material-icons">close</i>
+						</div>
+				</form>
+			</div>
+		</div>
+  </nav>
+
+<section>
+	<div class="container">
+		
+		<div class="row">
+			<div class="col s12">
+				<p>
+					This tool uses curl to fetch the header information, looks for the CF-Cache-Status, and then reports on what is found.
+				</p>
+				<h3 class="flow-text">Result</h3>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col s12">
+					<div class="card horizontal">
+						<div class="card-action top success">
+          		<span class="card-title">Success</span>
+							<img style="float: right; margin-top:5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAABOFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8CSeP7AAAAZ3RSTlMAAQIDBAUGBwgJCwwQERITFRYaGxwdHiYqKy4vMDEyMzQ1Njc4OTs9Pj9HSUtMTVFVV1tdXmNoaWttcHFzdHeCg4WIjI+dnqWmqqutr7C5ury+wMHDxcfIyszO1dnc3ubo7/X3+fv9ANBSswAAAeZJREFUGBmNwQdDEmEABuD3u9FFVtDQhqkx1HZq2qKiJTFEGTJMi4K49///g+DuPm7BHc+DmVRjyVCxGD2Tb9LWyGd0xFgv0e/HGiJkLxh2nsYc1045W/MqZtkxOY/5EiHiO6N8E/BTa4x2pMBLlBmnJODxmfEKcD3mIh5BSgy4iEECjhIXU4JtmYu6DUuNkc7ft+moYuIGI5UV4CsdKYy9YZSywNgX2l5jrM8IZQFLgZY+gCQjVARs4oKWJLDJ+SoC0iEtOeADpeHm0gt6VQQk4y8teaBKx/AWgHW6KgokvUdbGejRNriJiQ1KFQWS3qOjA/yhbRm2h7RVFEh6l1IfGNJShpTmRFWBpHU5NQR+01LHVJZkVYGkdej6BbRo28JUjlUFktamRwMo0pHF1B0Fktam1yGwTymDMO2UPq+Ae5xKI0hr0e8ukKBrA35aiwEJAC261uGlNhnQwthTeqzBpTYZ9ARjhkmPB5DUBoNMAxOf6LUKm1pnyEdYEia9VjGh1hliXobtgD73AagnDDuAQ/ykz7a4csKwMwEpZTKemYIrx3hZeO0xzi78dhltB0E5k/OZaYQlu5yncx2ziP0RZ/m3JzCH8W7EoNHbS4igb9fodbSlI46+8rxQPD47LhaeregI+Q/16zg36cVDtwAAAABJRU5ErkJggg==" width="24px" height="24px">
+        		</div>
+						
+						<div class="card-content">
+							<span class="flow-text">CF-Cache-Status: Hit</span>
+							<p>The resource is in Cloudflare's CDN cache, and was served from Cloudflare's CDN cache.</p>
+						</div>
+						
+						<div class="card-right valign-wrapper">
+							&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Refresh</span></a>&nbsp;&nbsp;
+						</div>
+						
+						<ul class="collapsible">
+							<li>
+								<div class="collapsible-header">
+									<div class="right"><a href="#!">Help</a></div>
+								</div>
+								<div class="collapsible-body">
+									<strong>Note:</strong> Cloudflare's static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every datacenter location.
+								</div>
+							</li>
+						</ul>	
+						
+					</div>
+				</div>
+			</div>
+		
+		<div class="row">
+			<div class="col s12">
+					<div class="card horizontal">
+						<div class="card-action top warning">
+          		<span class="card-title">Warning</span>
+							<img style="float: right;margin-top:5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMAAQIDBw0ODxATFBUXGBkaHB4hJyorLC0ubW9wcXN0dXh/i46gr7CytLXFx8jMz9Xz9ff7/VUolP4AAAFaSURBVEjHnZZ9Q4IwEMZJYLUkCUNNpRQwLYWUtvv+X60hpsDee/68PT/Yy213jiOS52Pse46R3MniQOEsup/HA419lBHoiGRPCvtwCwJ9PErsg3eQaHkn8qMSpCp83h9VoNDpue+PKShFXnrf1/gZ0fkHqkCrU2sdgxIMVNz2agVGWl7PixvaBEwbLowvwI4bSetwyp954w/BFIAmr3JzIDvnMzEHSJ3tUzAHIGbxxAaYs3hhA+xZnNoAhN13sAHAc5Ad4DvYDsD2gPWUhIs+pkxH8aIdChaikoOT6iBJDakWDJjZAJM6valFerv/uUA2V3TUXOovU2B7eTUC02fmWijWZlv0dnsqv038Zave3f/o/RVqP99jbUbRqFsgXjUEjfslaKycVRXxRe5BsfISCcuudHdXsn4g+BTZd0NFLxDm/dYhD3XNySwp/pqTIpm6Zi2NhzBG4vbnF/6vTGJVLtFgAAAAAElFTkSuQmCC" width="24px" height="24px">
+        		</div>
+						
+						<div class="card-content">
+							<span class="flow-text">CF-Cache-Status: Expired</span>
+							<p>The resource was in Cloudflare\'s CDN cache but has since expired, served from the origin server instead.</p>
+						</div>
+						
+						<div class="card-right valign-wrapper">
+							&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Refresh</span></a>&nbsp;&nbsp;
+						</div>
+						
+						<ul class="collapsible">
+							<li>
+								<div class="collapsible-header">
+									<div class="right"><a href="#!">Help</a></div>
+								</div>
+								<div class="collapsible-body">
+									<strong>Note:</strong> Cloudflare's static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every datacenter location.
+								</div>
+							</li>
+						</ul>	
+
+						
+					</div>
+				</div>
+			</div>
+		
+		<div class="row">
+			<div class="col s12">
+					<div class="card horizontal">
+						<div class="card-action top danger">
+          		<span class="card-title">Error</span>
+							<img style="float: right;margin-top:5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMAAQIDBw0ODxATFBUXGBkaHB4hJyorLC0ubW9wcXN0dXh/i46gr7CytLXFx8jMz9Xz9ff7/VUolP4AAAFaSURBVEjHnZZ9Q4IwEMZJYLUkCUNNpRQwLYWUtvv+X60hpsDee/68PT/Yy213jiOS52Pse46R3MniQOEsup/HA419lBHoiGRPCvtwCwJ9PErsg3eQaHkn8qMSpCp83h9VoNDpue+PKShFXnrf1/gZ0fkHqkCrU2sdgxIMVNz2agVGWl7PixvaBEwbLowvwI4bSetwyp954w/BFIAmr3JzIDvnMzEHSJ3tUzAHIGbxxAaYs3hhA+xZnNoAhN13sAHAc5Ad4DvYDsD2gPWUhIs+pkxH8aIdChaikoOT6iBJDakWDJjZAJM6valFerv/uUA2V3TUXOovU2B7eTUC02fmWijWZlv0dnsqv038Zave3f/o/RVqP99jbUbRqFsgXjUEjfslaKycVRXxRe5BsfISCcuudHdXsn4g+BTZd0NFLxDm/dYhD3XNySwp/pqTIpm6Zi2NhzBG4vbnF/6vTGJVLtFgAAAAAElFTkSuQmCC" width="24px" height="24px">
+        		</div>
+						
+						<div class="card-content">
+							<span class="flow-text">CF-Cache-Status: Miss</span>
+							<p>The resource is not in Cloudflare\'s CDN cache. It was served from the origin server instead.</p>
+						</div>
+						
+						<div class="card-right valign-wrapper">
+							&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Refresh</span></a>&nbsp;&nbsp;
+						</div>
+						
+						<ul class="collapsible">
+							<li>
+								<div class="collapsible-header">
+									<div class="right"><a href="#!">Help</a></div>
+								</div>
+								<div class="collapsible-body">
+									<strong>Note:</strong> Cloudflare's static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every datacenter location.
+								</div>
+							</li>
+						</ul>	
+						
+					</div>
+				</div>
+			</div>
+		
+		
+		<div class="row">
+			<div class="col s12">
+				
+				<div class="card">
+					<div class="card-content">
+						<p>
+							<h5 class="flow-text">What if there no "CF-Cache-Status" header?</h5>
+							<p>
+								If the "CF-Cache-Status" header is missing (but you are seeing other Cloudflare headers such as "CF-RAY"), this can indicate that the resource is not something we would ordinarily cache. There is a <a href="https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-">list of file extensions Cloudflare caches by default</a> and you can utilise Page Rules to implement <a href="https://support.cloudflare.com/hc/en-us/articles/200172266-What-do-the-custom-caching-options-mean-in-Page-Rules-">custom caching options</a> (including static content and HTML).
+							</p>
+							<h6>Notes:</h6>
+							<ul class="browser-default">
+								<li>Cloudflare will not cache your site or static content if you have  no-cache and private headers coming from your server. If you want Cloudflare to cache content on your site, please make sure that the headers are changed to allow caching. If you don't know what your headers are returning, please use a service like <a href="http://redbot.org/">Redbot</a> to check.</li>
+								<li>Cloudflare does not cache off-site or third-party resources (widgets, etc.).</li>
+								<li>Cloudflare will only proxy and cache records where Cloudflare is proxying that record in your DNS settings.</li>
+								<li>You can adjust your caching level and cache TTL in <a href="https://dash.cloudflare.com/">your Cloudflare</a> caching settings under the section '<strong>Speed</strong>'.</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+	</div>
+</section>
+
+
+
+
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5>Disclaimer</h5>
+				<p>CF-Cache-Status is neither owned nor operated by Cloudflare Inc. This software available on this site is provided "as is" and there are no warranties expressed or implied.</p>
+			</div>
+			<div class="col l5 offset-l1 s12">
+				<h5>Support links</h5>
+				<ul>
+					<li><a href="https://support.cloudflare.com/hc/en-us/articles/202775670-How-Do-I-Tell-CloudFlare-What-to-Cache-">How do I tell Cloudflare what to cache?</a></li>
+					<li><a href="https://support.cloudflare.com/hc/en-us/articles/115000150272-How-do-I-use-Cache-Everything-with-Cloudflare-">How do I use Cache Everything with Cloudflare?</a></li>
+					<li><a href="https://support.cloudflare.com/hc/en-us/search?utf8=%E2%9C%93&query=caching&commit=Search">Cloudflare's caching articles</a></li>
+					<li><a href="https://support.cloudflare.com/hc/en-us/search?utf8=%E2%9C%93&query=cdn&commit=Search">Cloudflare's CDN article</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Copyright <a href="https://jay.holtslander.ca/">Jay Holtslander</a>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+
+
+<!-- Gitter Chat Link -->
+<div class="fixed-action-btn"><a class="btn-floating btn-large" href="https://gitter.im/Dogfalo/materialize" target="_blank"><i class="large material-icons">chat</i></a></div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
