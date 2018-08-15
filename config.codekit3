@@ -69,6 +69,62 @@
 		"oAP": "\/dist\/_no-result-note.html",
 		"oF": 0
 		},
+	"\/src\/_result-expired.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result-expired.html",
+		"oF": 0
+		},
+	"\/src\/_result-hit.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result-hit.html",
+		"oF": 0
+		},
+	"\/src\/_result-ignored.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result-ignored.html",
+		"oF": 0
+		},
+	"\/src\/_result-miss.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result-miss.html",
+		"oF": 0
+		},
+	"\/src\/_result-revalidated.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result-revalidated.html",
+		"oF": 0
+		},
+	"\/src\/_result-stale.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result-stale.html",
+		"oF": 0
+		},
+	"\/src\/_result-updating.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result-updating.html",
+		"oF": 0
+		},
+	"\/src\/_result-waiting.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result-waiting.html",
+		"oF": 0
+		},
 	"\/src\/_result.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -87,8 +143,8 @@
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/dist\/index.html",
-		"oF": 0
+		"oAP": "\/dist\/index.php",
+		"oF": 2
 		},
 	"\/src\/js\/index.js": {
 		"ft": 64,
@@ -99,6 +155,13 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/src\/scss\/.sass-cache\/00a0fc394bd70a4277f6faa400718d6205ff2af4\/materialize.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/scss\/.sass-cache\/00a0fc394bd70a4277f6faa400718d6205ff2af4\/materialize.scssc",
+		"oF": 0
 		},
 	"\/src\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/material-icons.scssc": {
 		"cB": 0,
@@ -114,8 +177,15 @@
 		"oAP": "\/dist\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/materialize.scssc",
 		"oF": 0
 		},
+	"\/src\/scss\/fonts\/material-icons.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/css\/fonts\/material-icons.woff2",
+		"oF": 2
+		},
 	"\/src\/scss\/material-icons.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -141,7 +211,7 @@
 		"uL": 0
 		},
 	"\/src\/scss\/normalize.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -177,11 +247,11 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-confession",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 556006286
+	"lastBuiltDate": 556054113
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -1572,7 +1642,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http:\/\/localhost:8888\/CF-Cache-Status\/dist\/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

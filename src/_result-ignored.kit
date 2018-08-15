@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col s12">
+		<div class="card horizontal">
+			<div class="card-action top warning">
+				<span class="card-title">Warning</span>
+				<img style="display: inline-block; float: right; margin-top:5px;" width="24px" height="24px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMAAQIDBw0ODxATFBUXGBkaHB4hJyorLC0ubW9wcXN0dXh/i46gr7CytLXFx8jMz9Xz9ff7/VUolP4AAAFaSURBVEjHnZZ9Q4IwEMZJYLUkCUNNpRQwLYWUtvv+X60hpsDee/68PT/Yy213jiOS52Pse46R3MniQOEsup/HA419lBHoiGRPCvtwCwJ9PErsg3eQaHkn8qMSpCp83h9VoNDpue+PKShFXnrf1/gZ0fkHqkCrU2sdgxIMVNz2agVGWl7PixvaBEwbLowvwI4bSetwyp954w/BFIAmr3JzIDvnMzEHSJ3tUzAHIGbxxAaYs3hhA+xZnNoAhN13sAHAc5Ad4DvYDsD2gPWUhIs+pkxH8aIdChaikoOT6iBJDakWDJjZAJM6valFerv/uUA2V3TUXOovU2B7eTUC02fmWijWZlv0dnsqv038Zave3f/o/RVqP99jbUbRqFsgXjUEjfslaKycVRXxRe5BsfISCcuudHdXsn4g+BTZd0NFLxDm/dYhD3XNySwp/pqTIpm6Zi2NhzBG4vbnF/6vTGJVLtFgAAAAAElFTkSuQmCC">
+			</div>
+
+			<div class="card-content" style="width: 70%;">
+				<span class="flow-text">CF-Cache-Status: Ignored</span>
+				<p>
+					The resource is cacheable but is not in Cloudflare\'s CDN cache because it hasn\'t met the threshold (number of requests, usually 3). Served from the origin server instead. Will become a HIT once it passes the threshold.
+				</p>
+				<!-- DISPLAY RAY ID -->
+				<?php
+					if ($ray !=='') {
+						echo '<br/><p><strong>Ray ID:</strong>&nbsp;'. $ray. '</p>';
+					}
+				?>
+			</div>
+
+			<div class="card-right valign-wrapper" style="width: 30%; display: flex;">
+				&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Refresh</span></a>&nbsp;&nbsp;
+			</div>
+
+			<ul class="collapsible">
+				<li>
+					<div class="collapsible-header">
+						<div class="right"><a href="#!">Help</a></div>
+					</div>
+					<div class="collapsible-body">
+						<strong>Note:</strong> Cloudflare's static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every datacenter location.
+					</div>
+				</li>
+			</ul>	
+		</div>
+	</div>
+</div>

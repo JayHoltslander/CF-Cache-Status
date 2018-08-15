@@ -1,23 +1,16 @@
 <div class="row">
 	<div class="col s12">
 		<div class="card horizontal">
-			<div class="card-action top <!-- $alert-color -->">
-				<span class="card-title"><!-- $title --></span>
-				<img style="display:<!-- $icon-display -->; float: right; margin-top:5px; " src="<!-- $alert-icon -->" width="24px" height="24px">
+			<div class="card-action top grey lighten-1">
+				<span class="card-title">Ready to test</span>
 			</div>
 
-			<div class="card-content" style="width: <!-- $col-1-width -->;">
-				<span class="flow-text">CF-Cache-Status: <!-- $status --></span>
-				<p><!-- $result-description --></p>
-				<!-- DISPLAY RAY ID -->
-				<?php
-					if ($status=="CF-Cache-Status: HIT") {
-						echo '<br/><p><strong>Ray ID:</strong>&nbsp;'. $ray. '</p>';
-					}
-				?>
+			<div class="card-content" style="width: 100%;">
+				<span class="flow-text">CF-Cache-Status: Untested</span>
+				<p>This tool uses curl to fetch the header information, looks for the CF-Cache-Status, and then reports on what is found. Get started by entering any URL into the input above.</p>
 			</div>
 
-			<div class="card-right valign-wrapper" style="width: <!-- $col-2-width -->; display: <!-- $col-2-display -->;">
+			<div class="card-right valign-wrapper" style="width: 0%; display: none;">
 				&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Refresh</span></a>&nbsp;&nbsp;
 			</div>
 

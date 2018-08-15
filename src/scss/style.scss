@@ -10,6 +10,9 @@ $danger-color: #bf223c;
 body {
 	background-color: #e6e6e6;
 }
+section {
+	padding: 64px 0 0 0;
+}
 a {
 	color: $brand-blue;
 	&:hover {color: #f4a15d;}
@@ -25,8 +28,10 @@ a {
     display: inline-block;
     font-size: 1.5rem;
     padding: 0;
+    font-weight: 300;
 		svg {
 			width:32px;
+			height: 32px;
 			position: relative;
 			top: 7px;
 			path {
@@ -85,11 +90,11 @@ a {
 	&.horizontal {
 		flex-flow: row wrap;
 		.card-content {
-			width: 70%;
+			// width: 70%;
 		}
 		.card-right {
 			position: relative;
-			width: 30%;
+			// width: 30%;
 			background-color: #eee;
 			text-align: center;
 			border-left: 1px solid rgba(160,160,160,0.2);
