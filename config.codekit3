@@ -41,6 +41,48 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/src\/_chat-button.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_chat-button.html",
+		"oF": 0
+		},
+	"\/src\/_footer.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_footer.html",
+		"oF": 0
+		},
+	"\/src\/_navbar.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_navbar.html",
+		"oF": 0
+		},
+	"\/src\/_no-result-note.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_no-result-note.html",
+		"oF": 0
+		},
+	"\/src\/_result.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result.html",
+		"oF": 0
+		},
+	"\/src\/_search-bar.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_search-bar.html",
+		"oF": 0
+		},
 	"\/src\/index.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -57,6 +99,20 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/src\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/material-icons.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/material-icons.scssc",
+		"oF": 0
+		},
+	"\/src\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/materialize.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/materialize.scssc",
+		"oF": 0
 		},
 	"\/src\/scss\/material-icons.scss": {
 		"aP": 0,
@@ -121,7 +177,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-confession",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 556005629
+	"lastBuiltDate": 556006286
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
