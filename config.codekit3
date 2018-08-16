@@ -97,6 +97,13 @@
 		"oAP": "\/dist\/_result-miss.html",
 		"oF": 0
 		},
+	"\/src\/_result-not-cloudflare.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_result-not-cloudflare.html",
+		"oF": 0
+		},
 	"\/src\/_result-revalidated.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -175,6 +182,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/dist\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/materialize.scssc",
+		"oF": 0
+		},
+	"\/src\/scss\/.sass-cache\/40e7660e7998f911577e33adb989d363364143c4\/materialize.scssc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/scss\/.sass-cache\/40e7660e7998f911577e33adb989d363364143c4\/materialize.scssc",
 		"oF": 0
 		},
 	"\/src\/scss\/fonts\/material-icons.woff2": {
@@ -1642,7 +1656,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888\/CF-Cache-Status\/dist\/",
+	"externalServerAddress": "http:\/\/localhost:80\/CF-Cache-Status\/dist\/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
