@@ -21,6 +21,14 @@
 					</div>
 					<div class="collapsible-body">
 						<strong>Note:</strong> Cloudflare's static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.
+						<h5>The response recieved</h5>
+						<div class="card grey-text text-lighten-1 black">
+							<div class="card-content">
+								<?php
+									var_dump($headers);
+								?>
+							</div>
+						</div>
 					</div>
 				</li>
 			</ul>	
