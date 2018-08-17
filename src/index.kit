@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="css/material-icons.css">
 	<!-- <link rel="stylesheet" href="css/optimized.css"> -->
 
-
 	<script defer src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 	<script defer src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js'></script>
 	<script defer src="js/index.js"></script>
@@ -24,24 +23,33 @@
 
 <section>
 	<div class="container">
-
-
-		<!-- include _result-waiting.kit -->
 		<!-- include _result-not-cloudflare.kit -->
+
+
 
 
 <?php
 
+// SET TIME OUT PERIOD FOR GET HEADERS (DEFAULT 60)
+ini_set('default_socket_timeout', 5);
+
+// GET HEADERS
+$headers=false;
+if (isset($_GET['url']) && $_GET['url']!==''){
+	$headers = get_headers ($_GET['url']);
+	// UNCOMMENT TO TEST
+	// var_dump($headers);
+
+	// TAKE AN ACTION IF THERE'S A TIMEOUT ON GETTING HEADERS (EG: NO HTTPS)
+	if ($headers === false && count($http_response_header) === 0) {
+	    include 'test-timed-out.php';
+	}	
+}
 
 
-// array get_headers ( string $url [, int $format = 0 [, resource $context ]] )
-
-$headers = get_headers ("https://skunkworks.ca");
 
 
-// UNCOMMENT TO TEST
-//
-// var_dump($headers);
+
 
 
 $status = '';
@@ -65,365 +73,130 @@ foreach($headers as $head) {
 		$ray = str_replace('CF-RAY: ', '', $ray);
 		// DATA CENTERS - https://www.cloudflarestatus.com/
 		// NORTH AMERICA
-		$ray = str_replace('-IAD',' (Ashburn, VA, United States)', $ray);
-		$ray = str_replace('-ATL',' (Atlanta, GA, United States)', $ray);
-		$ray = str_replace('-BOS',' (Boston, MA, United States)', $ray);
-		$ray = str_replace('-YYC',' (Calgary, AB, Canada)', $ray);
-		$ray = str_replace('-ORD',' (Chicago, IL, United States)', $ray);
-		$ray = str_replace('-DFW',' (Dallas, TX, United States)', $ray);
-		$ray = str_replace('-DEN',' (Denver, CO, United States)', $ray);
-		$ray = str_replace('-DTW',' (Detroit, MI, United States)', $ray);
-		$ray = str_replace('-IAH',' (Houston, TX, United States)', $ray);
-		$ray = str_replace('-IND',' (Indianapolis, IN, United States)', $ray);
-		$ray = str_replace('-JAX',' (Jacksonville, FL, United States)', $ray);
-		$ray = str_replace('-MCI',' (Kansas City, MO, United States)', $ray);
-		$ray = str_replace('-LAS',' (Las Vegas, NV, United States)', $ray);
-		$ray = str_replace('-LAX',' (Los Angeles, CA, United States)', $ray);
-		$ray = str_replace('-MFE',' (McAllen, TX, United States)', $ray);
-		$ray = str_replace('-MEM',' (Memphis, TN, United States)', $ray);
-		$ray = str_replace('-MEX',' (Mexico City, Mexico)', $ray);
-		$ray = str_replace('-MIA',' (Miami, FL, United States)', $ray);
-		$ray = str_replace('-MSP',' (Minneapolis, MN, United States)', $ray);
-		$ray = str_replace('-MGM',' (Montgomery, AL, United States)', $ray);
-		$ray = str_replace('-YUL',' (Montréal, QC, Canada)', $ray);
-		$ray = str_replace('-BNA',' (Nashville, TN, United States)', $ray);
-		$ray = str_replace('-EWR',' (Newark, NJ, United States)', $ray);
-		$ray = str_replace('-OMA',' (Omaha, NE, United States)', $ray);
-		$ray = str_replace('-PHX',' (Phoenix, AZ, United States)', $ray);
-		$ray = str_replace('-PIT',' (Pittsburgh, PA, United States)', $ray);
-		$ray = str_replace('-PDX',' (Portland, OR, United States)', $ray);
-		$ray = str_replace('-RIC',' (Richmond, Virginia)', $ray);
-		$ray = str_replace('-SMF',' (Sacramento, CA, United States)', $ray);
-		$ray = str_replace('-SLC',' (Salt Lake City, UT, United States)', $ray);
-		$ray = str_replace('-SAN',' (San Diego, CA, United States)', $ray);
-		$ray = str_replace('-SJC',' (San Jose, CA, United States)', $ray);
-		$ray = str_replace('-YXE',' (Saskatoon, SK, Canada)', $ray);
-		$ray = str_replace('-SEA',' (Seattle, WA, United States)', $ray);
-		$ray = str_replace('-STL',' (St. Louis, MO, United States)', $ray);
-		$ray = str_replace('-TPA',' (Tampa, FL, United States)', $ray);
-		$ray = str_replace('-YYZ',' (Toronto, ON, Canada)', $ray);
-		$ray = str_replace('-YVR',' (Vancouver, BC, Canada)', $ray);
-		$ray = str_replace('-TLH',' (Tallahassee, FL, United States)', $ray);
-		$ray = str_replace('-YWG',' (Winnipeg, MB, Canada)', $ray);
+		$ray = str_replace('-IAD','<br/>(Ashburn, VA, United States)', $ray);
+		$ray = str_replace('-ATL','<br/>(Atlanta, GA, United States)', $ray);
+		$ray = str_replace('-BOS','<br/>(Boston, MA, United States)', $ray);
+		$ray = str_replace('-YYC','<br/>(Calgary, AB, Canada)', $ray);
+		$ray = str_replace('-ORD','<br/>(Chicago, IL, United States)', $ray);
+		$ray = str_replace('-DFW','<br/>(Dallas, TX, United States)', $ray);
+		$ray = str_replace('-DEN','<br/>(Denver, CO, United States)', $ray);
+		$ray = str_replace('-DTW','<br/>(Detroit, MI, United States)', $ray);
+		$ray = str_replace('-IAH','<br/>(Houston, TX, United States)', $ray);
+		$ray = str_replace('-IND','<br/>(Indianapolis, IN, United States)', $ray);
+		$ray = str_replace('-JAX','<br/>(Jacksonville, FL, United States)', $ray);
+		$ray = str_replace('-MCI','<br/>(Kansas City, MO, United States)', $ray);
+		$ray = str_replace('-LAS','<br/>(Las Vegas, NV, United States)', $ray);
+		$ray = str_replace('-LAX','<br/>(Los Angeles, CA, United States)', $ray);
+		$ray = str_replace('-MFE','<br/>(McAllen, TX, United States)', $ray);
+		$ray = str_replace('-MEM','<br/>(Memphis, TN, United States)', $ray);
+		$ray = str_replace('-MEX','<br/>(Mexico City, Mexico)', $ray);
+		$ray = str_replace('-MIA','<br/>(Miami, FL, United States)', $ray);
+		$ray = str_replace('-MSP','<br/>(Minneapolis, MN, United States)', $ray);
+		$ray = str_replace('-MGM','<br/>(Montgomery, AL, United States)', $ray);
+		$ray = str_replace('-YUL','<br/>(Montréal, QC, Canada)', $ray);
+		$ray = str_replace('-BNA','<br/>(Nashville, TN, United States)', $ray);
+		$ray = str_replace('-EWR','<br/>(Newark, NJ, United States)', $ray);
+		$ray = str_replace('-OMA','<br/>(Omaha, NE, United States)', $ray);
+		$ray = str_replace('-PHX','<br/>(Phoenix, AZ, United States)', $ray);
+		$ray = str_replace('-PIT','<br/>(Pittsburgh, PA, United States)', $ray);
+		$ray = str_replace('-PDX','<br/>(Portland, OR, United States)', $ray);
+		$ray = str_replace('-RIC','<br/>(Richmond, Virginia)', $ray);
+		$ray = str_replace('-SMF','<br/>(Sacramento, CA, United States)', $ray);
+		$ray = str_replace('-SLC','<br/>(Salt Lake City, UT, United States)', $ray);
+		$ray = str_replace('-SAN','<br/>(San Diego, CA, United States)', $ray);
+		$ray = str_replace('-SJC','<br/>(San Jose, CA, United States)', $ray);
+		$ray = str_replace('-YXE','<br/>(Saskatoon, SK, Canada)', $ray);
+		$ray = str_replace('-SEA','<br/>(Seattle, WA, United States)', $ray);
+		$ray = str_replace('-STL','<br/>(St. Louis, MO, United States)', $ray);
+		$ray = str_replace('-TPA','<br/>(Tampa, FL, United States)', $ray);
+		$ray = str_replace('-YYZ','<br/>(Toronto, ON, Canada)', $ray);
+		$ray = str_replace('-YVR','<br/>(Vancouver, BC, Canada)', $ray);
+		$ray = str_replace('-TLH','<br/>(Tallahassee, FL, United States)', $ray);
+		$ray = str_replace('-YWG','<br/>(Winnipeg, MB, Canada)', $ray);
 		// EUROPE
-		$ray = str_replace('-AMS',' (Amsterdam, Netherlands)', $ray);
-		$ray = str_replace('-ATH',' (Athens, Greece)', $ray);
-		$ray = str_replace('-BCN',' (Barcelona, Spain)', $ray);
-		$ray = str_replace('-BEG',' (Belgrade, Serbia)', $ray);
-		$ray = str_replace('-TXL',' (Berlin, Germany)', $ray);
-		$ray = str_replace('-BRU',' (Brussels, Belgium)', $ray);
-		$ray = str_replace('-OTP',' (Bucharest, Romania)', $ray);
-		$ray = str_replace('-BUD',' (Budapest, Hungary)', $ray);
-		$ray = str_replace('-KIV',' (Chișinău, Moldova)', $ray);
-		$ray = str_replace('-CPH',' (Copenhagen, Denmark)', $ray);
-		$ray = str_replace('-DUB',' (Dublin, Ireland)', $ray);
-		$ray = str_replace('-DUS',' (Düsseldorf, Germany)', $ray);
-		$ray = str_replace('-EDI',' (Edinburgh, United Kingdom)', $ray);
-		$ray = str_replace('-FRA',' (Frankfurt, Germany)', $ray);
-		$ray = str_replace('-HAM',' (Hamburg, Germany)', $ray);
-		$ray = str_replace('-HEL',' (Helsinki, Finland)', $ray);
-		$ray = str_replace('-IST',' (Istanbul, Turkey)', $ray);
-		$ray = str_replace('-KBP',' (Kiev, Ukraine)', $ray);
-		$ray = str_replace('-LIS',' (Lisbon, Portugal)', $ray);
-		$ray = str_replace('-LHR',' (London, United Kingdom)', $ray);
-		$ray = str_replace('-LUX',' (Luxembourg City, Luxembourg)', $ray);
-		$ray = str_replace('-MAD',' (Madrid, Spain)', $ray);
-		$ray = str_replace('-MAN',' (Manchester, United Kingdom)', $ray);
-		$ray = str_replace('-MRS',' (Marseille, France)', $ray);
-		$ray = str_replace('-MXP',' (Milan, Italy)', $ray);
-		$ray = str_replace('-DME',' (Moscow, Russia)', $ray);
-		$ray = str_replace('-MUC',' (Munich, Germany)', $ray);
-		$ray = str_replace('-OSL',' (Oslo, Norway)', $ray);
-		$ray = str_replace('-CDG',' (Paris, France)', $ray);
-		$ray = str_replace('-PRG',' (Prague, Czech Republic)', $ray);
-		$ray = str_replace('-KEF',' (Reykjavík, Iceland)', $ray);
-		$ray = str_replace('-RIX',' (Riga, Latvia)', $ray);
-		$ray = str_replace('-FCO',' (Rome, Italy)', $ray);
-		$ray = str_replace('-SOF',' (Sofia, Bulgaria)', $ray);
-		$ray = str_replace('-ARN',' (Stockholm, Sweden)', $ray);
-		$ray = str_replace('-TLL',' (Tallinn, Estonia)', $ray);
-		$ray = str_replace('-VIE',' (Vienna, Austria)', $ray);
-		$ray = str_replace('-VNO',' (Vilnius, Lithuania)', $ray);
-		$ray = str_replace('-WAW',' (Warsaw, Poland)', $ray);
-		$ray = str_replace('-ZAG',' (Zagreb, Croatia)', $ray);
-		$ray = str_replace('-ZRH',' (Zürich, Switzerland)', $ray);
+		$ray = str_replace('-AMS','<br/>(Amsterdam, Netherlands)', $ray);
+		$ray = str_replace('-ATH','<br/>(Athens, Greece)', $ray);
+		$ray = str_replace('-BCN','<br/>(Barcelona, Spain)', $ray);
+		$ray = str_replace('-BEG','<br/>(Belgrade, Serbia)', $ray);
+		$ray = str_replace('-TXL','<br/>(Berlin, Germany)', $ray);
+		$ray = str_replace('-BRU','<br/>(Brussels, Belgium)', $ray);
+		$ray = str_replace('-OTP','<br/>(Bucharest, Romania)', $ray);
+		$ray = str_replace('-BUD','<br/>(Budapest, Hungary)', $ray);
+		$ray = str_replace('-KIV','<br/>(Chișinău, Moldova)', $ray);
+		$ray = str_replace('-CPH','<br/>(Copenhagen, Denmark)', $ray);
+		$ray = str_replace('-DUB','<br/>(Dublin, Ireland)', $ray);
+		$ray = str_replace('-DUS','<br/>(Düsseldorf, Germany)', $ray);
+		$ray = str_replace('-EDI','<br/>(Edinburgh, United Kingdom)', $ray);
+		$ray = str_replace('-FRA','<br/>(Frankfurt, Germany)', $ray);
+		$ray = str_replace('-HAM','<br/>(Hamburg, Germany)', $ray);
+		$ray = str_replace('-HEL','<br/>(Helsinki, Finland)', $ray);
+		$ray = str_replace('-IST','<br/>(Istanbul, Turkey)', $ray);
+		$ray = str_replace('-KBP','<br/>(Kiev, Ukraine)', $ray);
+		$ray = str_replace('-LIS','<br/>(Lisbon, Portugal)', $ray);
+		$ray = str_replace('-LHR','<br/>(London, United Kingdom)', $ray);
+		$ray = str_replace('-LUX','<br/>(Luxembourg City, Luxembourg)', $ray);
+		$ray = str_replace('-MAD','<br/>(Madrid, Spain)', $ray);
+		$ray = str_replace('-MAN','<br/>(Manchester, United Kingdom)', $ray);
+		$ray = str_replace('-MRS','<br/>(Marseille, France)', $ray);
+		$ray = str_replace('-MXP','<br/>(Milan, Italy)', $ray);
+		$ray = str_replace('-DME','<br/>(Moscow, Russia)', $ray);
+		$ray = str_replace('-MUC','<br/>(Munich, Germany)', $ray);
+		$ray = str_replace('-OSL','<br/>(Oslo, Norway)', $ray);
+		$ray = str_replace('-CDG','<br/>(Paris, France)', $ray);
+		$ray = str_replace('-PRG','<br/>(Prague, Czech Republic)', $ray);
+		$ray = str_replace('-KEF','<br/>(Reykjavík, Iceland)', $ray);
+		$ray = str_replace('-RIX','<br/>(Riga, Latvia)', $ray);
+		$ray = str_replace('-FCO','<br/>(Rome, Italy)', $ray);
+		$ray = str_replace('-SOF','<br/>(Sofia, Bulgaria)', $ray);
+		$ray = str_replace('-ARN','<br/>(Stockholm, Sweden)', $ray);
+		$ray = str_replace('-TLL','<br/>(Tallinn, Estonia)', $ray);
+		$ray = str_replace('-VIE','<br/>(Vienna, Austria)', $ray);
+		$ray = str_replace('-VNO','<br/>(Vilnius, Lithuania)', $ray);
+		$ray = str_replace('-WAW','<br/>(Warsaw, Poland)', $ray);
+		$ray = str_replace('-ZAG','<br/>(Zagreb, Croatia)', $ray);
+		$ray = str_replace('-ZRH','<br/>(Zürich, Switzerland)', $ray);
 		// LATIN AMERICA & THE CARIBBEAN
-		$ray = str_replace('-BOG','(Bogotá, Colombia)', $ray);
-		$ray = str_replace('-EZE','(Buenos Aires, Argentina)', $ray);
-		$ray = str_replace('-LIM','(Lima, Peru)', $ray);
-		$ray = str_replace('-MDE','(Medellín, Colombia)', $ray);
-		$ray = str_replace('-PTY','(Panama City, Panama)', $ray);
-		$ray = str_replace('-UIO','(Quito, Ecuador)', $ray);
-		$ray = str_replace('-GIG','(Rio de Janeiro, Brazil)', $ray);
-		$ray = str_replace('-GRU','(São Paulo, Brazil)', $ray);
-		$ray = str_replace('-SCL','(Valparaíso, Chile)', $ray);
-		$ray = str_replace('-CUR','(Willemstad, Curaçao)', $ray);
+		$ray = str_replace('-BOG','<br/>(Bogotá, Colombia)', $ray);
+		$ray = str_replace('-EZE','<br/>(Buenos Aires, Argentina)', $ray);
+		$ray = str_replace('-LIM','<br/>(Lima, Peru)', $ray);
+		$ray = str_replace('-MDE','<br/>(Medellín, Colombia)', $ray);
+		$ray = str_replace('-PTY','<br/>(Panama City, Panama)', $ray);
+		$ray = str_replace('-UIO','<br/>(Quito, Ecuador)', $ray);
+		$ray = str_replace('-GIG','<br/>(Rio de Janeiro, Brazil)', $ray);
+		$ray = str_replace('-GRU','<br/>(São Paulo, Brazil)', $ray);
+		$ray = str_replace('-SCL','<br/>(Valparaíso, Chile)', $ray);
+		$ray = str_replace('-CUR','<br/>(Willemstad, Curaçao)', $ray);
 		// OCEANIA
-		$ray = str_replace('-AKL','(Auckland, New Zealand)', $ray);
-		$ray = str_replace('-BNE','(Brisbane, QLD, Australia)', $ray);
-		$ray = str_replace('-MEL','(Melbourne, VIC, Australia)', $ray);
-		$ray = str_replace('-PER','(Perth, WA, Australia)', $ray);
-		$ray = str_replace('-SYD','(Sydney, NSW, Australia)', $ray);
+		$ray = str_replace('-AKL','<br/>(Auckland, New Zealand)', $ray);
+		$ray = str_replace('-BNE','<br/>(Brisbane, QLD, Australia)', $ray);
+		$ray = str_replace('-MEL','<br/>(Melbourne, VIC, Australia)', $ray);
+		$ray = str_replace('-PER','<br/>(Perth, WA, Australia)', $ray);
+		$ray = str_replace('-SYD','<br/>(Sydney, NSW, Australia)', $ray);
 	}
 }
-
-
-
-// DISPLAY IT IF IT EXISTS
-if ($status=="CF-Cache-Status: HIT") {echo 
-'
-<div class="row">
-	<div class="col s12">
-		<div class="card horizontal">
-			<div class="card-action top success">
-				<span class="card-title">Success</span>
-				<img style="display: inline-block; float: right; margin-top:5px;" width="24px" height="24px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAABOFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8CSeP7AAAAZ3RSTlMAAQIDBAUGBwgJCwwQERITFRYaGxwdHiYqKy4vMDEyMzQ1Njc4OTs9Pj9HSUtMTVFVV1tdXmNoaWttcHFzdHeCg4WIjI+dnqWmqqutr7C5ury+wMHDxcfIyszO1dnc3ubo7/X3+fv9ANBSswAAAeZJREFUGBmNwQdDEmEABuD3u9FFVtDQhqkx1HZq2qKiJTFEGTJMi4K49///g+DuPm7BHc+DmVRjyVCxGD2Tb9LWyGd0xFgv0e/HGiJkLxh2nsYc1045W/MqZtkxOY/5EiHiO6N8E/BTa4x2pMBLlBmnJODxmfEKcD3mIh5BSgy4iEECjhIXU4JtmYu6DUuNkc7ft+moYuIGI5UV4CsdKYy9YZSywNgX2l5jrM8IZQFLgZY+gCQjVARs4oKWJLDJ+SoC0iEtOeADpeHm0gt6VQQk4y8teaBKx/AWgHW6KgokvUdbGejRNriJiQ1KFQWS3qOjA/yhbRm2h7RVFEh6l1IfGNJShpTmRFWBpHU5NQR+01LHVJZkVYGkdej6BbRo28JUjlUFktamRwMo0pHF1B0Fktam1yGwTymDMO2UPq+Ae5xKI0hr0e8ukKBrA35aiwEJAC261uGlNhnQwthTeqzBpTYZ9ARjhkmPB5DUBoNMAxOf6LUKm1pnyEdYEia9VjGh1hliXobtgD73AagnDDuAQ/ykz7a4csKwMwEpZTKemYIrx3hZeO0xzi78dhltB0E5k/OZaYQlu5yncx2ziP0RZ/m3JzCH8W7EoNHbS4igb9fodbSlI46+8rxQPD47LhaeregI+Q/16zg36cVDtwAAAABJRU5ErkJggg==">
-			</div>
-			<div class="card-content" style="width: 70%;">
-				<span class="flow-text">CF-Cache-Status: Hit</span>
-				<p>
-					The resource is in Cloudflares CDN cache, and was served from Cloudflares CDN cache.
-				</p>';
-				if ($ray !=='') {echo '<br/><p><strong>Ray ID:</strong>&nbsp;'. $ray. '</p>';}; 
-				if ($cachecontrol !=='') {echo '<p><strong>Cache-Control:</strong>&nbsp;'. $cachecontrol. '</p>';};
-			echo '
-			</div>
-			<div class="card-right valign-wrapper" style="width: 30%; display: flex;">
-				&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Retest</span></a>&nbsp;&nbsp;
-			</div>
-			<ul class="collapsible">
-				<li>
-					<div class="collapsible-header">
-						<div class="right"><a href="#!">Help</a></div>
-					</div>
-					<div class="collapsible-body">
-						<strong>Note:</strong> Cloudflares static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.
-					</div>
-				</li>
-			</ul>	
-		</div>
-	</div>
-</div>';
+// IF RAY ID AND CACHE STATUS AREN'T SEEN
+if ($ray=='' && $status=='' && $headers !==false) {
+	include 'result-not-cloudflare.php';
 }
 
 
 
-if ($status=="CF-Cache-Status: MISS") {echo 
-'
-<div class="row">
-	<div class="col s12">
-		<div class="card horizontal">
-			<div class="card-action top danger">
-				<span class="card-title">Error</span>
-				<img style="display: inline-block; float: right; margin-top:5px;" width="24px" height="24px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMAAQIDBw0ODxATFBUXGBkaHB4hJyorLC0ubW9wcXN0dXh/i46gr7CytLXFx8jMz9Xz9ff7/VUolP4AAAFaSURBVEjHnZZ9Q4IwEMZJYLUkCUNNpRQwLYWUtvv+X60hpsDee/68PT/Yy213jiOS52Pse46R3MniQOEsup/HA419lBHoiGRPCvtwCwJ9PErsg3eQaHkn8qMSpCp83h9VoNDpue+PKShFXnrf1/gZ0fkHqkCrU2sdgxIMVNz2agVGWl7PixvaBEwbLowvwI4bSetwyp954w/BFIAmr3JzIDvnMzEHSJ3tUzAHIGbxxAaYs3hhA+xZnNoAhN13sAHAc5Ad4DvYDsD2gPWUhIs+pkxH8aIdChaikoOT6iBJDakWDJjZAJM6valFerv/uUA2V3TUXOovU2B7eTUC02fmWijWZlv0dnsqv038Zave3f/o/RVqP99jbUbRqFsgXjUEjfslaKycVRXxRe5BsfISCcuudHdXsn4g+BTZd0NFLxDm/dYhD3XNySwp/pqTIpm6Zi2NhzBG4vbnF/6vTGJVLtFgAAAAAElFTkSuQmCC">
-			</div>
-			<div class="card-content" style="width: 70%;">
-				<span class="flow-text">CF-Cache-Status: Miss</span>
-				<p>
-					The resource is not in Cloudflare\'s CDN cache. It was served from the origin server instead.
-				</p>';
-				if ($ray !=='') {echo '<br/><p><strong>Ray ID:</strong>&nbsp;'. $ray. '</p>';}; 
-				if ($cachecontrol !=='') {echo '<p><strong>Cache-Control:</strong>&nbsp;'. $cachecontrol. '</p>';};
-			echo '
-			</div>
-			<div class="card-right valign-wrapper" style="width: 30%; display: flex;">
-				&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Retest</span></a>&nbsp;&nbsp;
-			</div>
-			<ul class="collapsible">
-				<li>
-					<div class="collapsible-header">
-						<div class="right"><a href="#!">Help</a></div>
-					</div>
-					<div class="collapsible-body">
-						<strong>Note:</strong> Cloudflare\'s static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.
-					</div>
-				</li>
-			</ul>	
-		</div>
-	</div>
-</div>
-';
+
+
+
+if ($_GET['url']!==''&&$_GET['url']!==null){
+// If a test was done, do this
+// 
+// DISPLAY TEST RESULT
+	include 'test-was-done.php';
 }
-if ($status=="CF-Cache-Status: EXPIRED") {echo 
-'
-<div class="row">
-	<div class="col s12">
-		<div class="card horizontal">
-			<div class="card-action top danger">
-				<span class="card-title">Warning</span>
-				<img style="display: inline-block; float: right; margin-top:5px;" width="24px" height="24px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMAAQIDBw0ODxATFBUXGBkaHB4hJyorLC0ubW9wcXN0dXh/i46gr7CytLXFx8jMz9Xz9ff7/VUolP4AAAFaSURBVEjHnZZ9Q4IwEMZJYLUkCUNNpRQwLYWUtvv+X60hpsDee/68PT/Yy213jiOS52Pse46R3MniQOEsup/HA419lBHoiGRPCvtwCwJ9PErsg3eQaHkn8qMSpCp83h9VoNDpue+PKShFXnrf1/gZ0fkHqkCrU2sdgxIMVNz2agVGWl7PixvaBEwbLowvwI4bSetwyp954w/BFIAmr3JzIDvnMzEHSJ3tUzAHIGbxxAaYs3hhA+xZnNoAhN13sAHAc5Ad4DvYDsD2gPWUhIs+pkxH8aIdChaikoOT6iBJDakWDJjZAJM6valFerv/uUA2V3TUXOovU2B7eTUC02fmWijWZlv0dnsqv038Zave3f/o/RVqP99jbUbRqFsgXjUEjfslaKycVRXxRe5BsfISCcuudHdXsn4g+BTZd0NFLxDm/dYhD3XNySwp/pqTIpm6Zi2NhzBG4vbnF/6vTGJVLtFgAAAAAElFTkSuQmCC">
-			</div>
-			<div class="card-content" style="width: 70%;">
-				<span class="flow-text">CF-Cache-Status: Expired</span>
-				<p>
-					The resource was in Cloudflare\'s CDN cache but has since expired, served from the origin server instead.
-				</p>';
-				if ($ray !=='') {echo '<br/><p><strong>Ray ID:</strong>&nbsp;'. $ray. '</p>';}; 
-				if ($cachecontrol !=='') {echo '<p><strong>Cache-Control:</strong>&nbsp;'. $cachecontrol. '</p>';};
-			echo '
-			</div>
-			<div class="card-right valign-wrapper" style="width: 30%; display: flex;">
-				&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Retest</span></a>&nbsp;&nbsp;
-			</div>
-			<ul class="collapsible">
-				<li>
-					<div class="collapsible-header">
-						<div class="right"><a href="#!">Help</a></div>
-					</div>
-					<div class="collapsible-body">
-						<strong>Note:</strong> Cloudflare\'s static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.
-					</div>
-				</li>
-			</ul>	
-		</div>
-	</div>
-</div>
-';
+else {
+// If a test has not been done, do this
+// 
+// DISPLAY "READY TO TEST" RESULT
+	include 'test-was-not-done.html';
 }
-if ($status=="CF-Cache-Status: STALE") {echo 
-'
-<div class="row">
-	<div class="col s12">
-		<div class="card horizontal">
-			<div class="card-action top warning">
-				<span class="card-title">Warning</span>
-				<img style="display: inline-block; float: right; margin-top:5px;" width="24px" height="24px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMAAQIDBw0ODxATFBUXGBkaHB4hJyorLC0ubW9wcXN0dXh/i46gr7CytLXFx8jMz9Xz9ff7/VUolP4AAAFaSURBVEjHnZZ9Q4IwEMZJYLUkCUNNpRQwLYWUtvv+X60hpsDee/68PT/Yy213jiOS52Pse46R3MniQOEsup/HA419lBHoiGRPCvtwCwJ9PErsg3eQaHkn8qMSpCp83h9VoNDpue+PKShFXnrf1/gZ0fkHqkCrU2sdgxIMVNz2agVGWl7PixvaBEwbLowvwI4bSetwyp954w/BFIAmr3JzIDvnMzEHSJ3tUzAHIGbxxAaYs3hhA+xZnNoAhN13sAHAc5Ad4DvYDsD2gPWUhIs+pkxH8aIdChaikoOT6iBJDakWDJjZAJM6valFerv/uUA2V3TUXOovU2B7eTUC02fmWijWZlv0dnsqv038Zave3f/o/RVqP99jbUbRqFsgXjUEjfslaKycVRXxRe5BsfISCcuudHdXsn4g+BTZd0NFLxDm/dYhD3XNySwp/pqTIpm6Zi2NhzBG4vbnF/6vTGJVLtFgAAAAAElFTkSuQmCC">
-			</div>
-			<div class="card-content" style="width: 70%;">
-				<span class="flow-text">CF-Cache-Status: Stale</span>
-				<p>
-					The resource is in Cloudflare\'s CDN cache but is expired. Served from CDN cache because another visitor\'s request has caused the CDN to fetch the resource from the origin server. This is a very uncommon occurrence and will only impact visitors that want the page right when it expires.
-				</p>';
-				if ($ray !=='') {echo '<br/><p><strong>Ray ID:</strong>&nbsp;'. $ray. '</p>';}; 
-				if ($cachecontrol !=='') {echo '<p><strong>Cache-Control:</strong>&nbsp;'. $cachecontrol. '</p>';};
-			echo '
-			</div>
-			<div class="card-right valign-wrapper" style="width: 30%; display: flex;">
-				&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Retest</span></a>&nbsp;&nbsp;
-			</div>
-			<ul class="collapsible">
-				<li>
-					<div class="collapsible-header">
-						<div class="right"><a href="#!">Help</a></div>
-					</div>
-					<div class="collapsible-body">
-						<strong>Note:</strong> Cloudflare\'s static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.
-					</div>
-				</li>
-			</ul>	
-		</div>
-	</div>
-</div>
-';
-}
-if ($status=="CF-Cache-Status: IGNORED") {echo 
-'
-<div class="row">
-	<div class="col s12">
-		<div class="card horizontal">
-			<div class="card-action top warning">
-				<span class="card-title">Warning</span>
-				<img style="display: inline-block; float: right; margin-top:5px;" width="24px" height="24px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMAAQIDBw0ODxATFBUXGBkaHB4hJyorLC0ubW9wcXN0dXh/i46gr7CytLXFx8jMz9Xz9ff7/VUolP4AAAFaSURBVEjHnZZ9Q4IwEMZJYLUkCUNNpRQwLYWUtvv+X60hpsDee/68PT/Yy213jiOS52Pse46R3MniQOEsup/HA419lBHoiGRPCvtwCwJ9PErsg3eQaHkn8qMSpCp83h9VoNDpue+PKShFXnrf1/gZ0fkHqkCrU2sdgxIMVNz2agVGWl7PixvaBEwbLowvwI4bSetwyp954w/BFIAmr3JzIDvnMzEHSJ3tUzAHIGbxxAaYs3hhA+xZnNoAhN13sAHAc5Ad4DvYDsD2gPWUhIs+pkxH8aIdChaikoOT6iBJDakWDJjZAJM6valFerv/uUA2V3TUXOovU2B7eTUC02fmWijWZlv0dnsqv038Zave3f/o/RVqP99jbUbRqFsgXjUEjfslaKycVRXxRe5BsfISCcuudHdXsn4g+BTZd0NFLxDm/dYhD3XNySwp/pqTIpm6Zi2NhzBG4vbnF/6vTGJVLtFgAAAAAElFTkSuQmCC">
-			</div>
-			<div class="card-content" style="width: 70%;">
-				<span class="flow-text">CF-Cache-Status: Ignored</span>
-				<p>
-					The resource is cacheable but is not in Cloudflare\'s CDN cache because it hasn\'t met the threshold (number of requests, usually 3). Served from the origin server instead. Will become a HIT once it passes the threshold.
-				</p>';
-				if ($ray !=='') {echo '<br/><p><strong>Ray ID:</strong>&nbsp;'. $ray. '</p>';}; 
-				if ($cachecontrol !=='') {echo '<p><strong>Cache-Control:</strong>&nbsp;'. $cachecontrol. '</p>';};
-			echo '
-			</div>
-			<div class="card-right valign-wrapper" style="width: 30%; display: flex;">
-				&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Retest</span></a>&nbsp;&nbsp;
-			</div>
-			<ul class="collapsible">
-				<li>
-					<div class="collapsible-header">
-						<div class="right"><a href="#!">Help</a></div>
-					</div>
-					<div class="collapsible-body">
-						<strong>Note:</strong> Cloudflare\'s static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.
-					</div>
-				</li>
-			</ul>	
-		</div>
-	</div>
-</div>
-';
-}
-if ($status=="CF-Cache-Status: REVALIDATED") {echo 
-'
-<div class="row">
-	<div class="col s12">
-		<div class="card horizontal">
-			<div class="card-action top success">
-				<span class="card-title">Success</span>
-				<img style="display: inline-block; float: right; margin-top:5px;" width="24px" height="24px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAABOFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8CSeP7AAAAZ3RSTlMAAQIDBAUGBwgJCwwQERITFRYaGxwdHiYqKy4vMDEyMzQ1Njc4OTs9Pj9HSUtMTVFVV1tdXmNoaWttcHFzdHeCg4WIjI+dnqWmqqutr7C5ury+wMHDxcfIyszO1dnc3ubo7/X3+fv9ANBSswAAAeZJREFUGBmNwQdDEmEABuD3u9FFVtDQhqkx1HZq2qKiJTFEGTJMi4K49///g+DuPm7BHc+DmVRjyVCxGD2Tb9LWyGd0xFgv0e/HGiJkLxh2nsYc1045W/MqZtkxOY/5EiHiO6N8E/BTa4x2pMBLlBmnJODxmfEKcD3mIh5BSgy4iEECjhIXU4JtmYu6DUuNkc7ft+moYuIGI5UV4CsdKYy9YZSywNgX2l5jrM8IZQFLgZY+gCQjVARs4oKWJLDJ+SoC0iEtOeADpeHm0gt6VQQk4y8teaBKx/AWgHW6KgokvUdbGejRNriJiQ1KFQWS3qOjA/yhbRm2h7RVFEh6l1IfGNJShpTmRFWBpHU5NQR+01LHVJZkVYGkdej6BbRo28JUjlUFktamRwMo0pHF1B0Fktam1yGwTymDMO2UPq+Ae5xKI0hr0e8ukKBrA35aiwEJAC261uGlNhnQwthTeqzBpTYZ9ARjhkmPB5DUBoNMAxOf6LUKm1pnyEdYEia9VjGh1hliXobtgD73AagnDDuAQ/ykz7a4csKwMwEpZTKemYIrx3hZeO0xzi78dhltB0E5k/OZaYQlu5yncx2ziP0RZ/m3JzCH8W7EoNHbS4igb9fodbSlI46+8rxQPD47LhaeregI+Q/16zg36cVDtwAAAABJRU5ErkJggg==">
-			</div>
-			<div class="card-content" style="width: 70%;">
-				<span class="flow-text">CF-Cache-Status: Revalidated</span>
-				<p>
-					Cloudflare had a stale representation of the object in their CDN cache, but they revalidated it by checking using either an If-Modified-Since header or an If-None-Match header.
-				</p>';
-				if ($ray !=='') {echo '<br/><p><strong>Ray ID:</strong>&nbsp;'. $ray. '</p>';}; 
-				if ($cachecontrol !=='') {echo '<p><strong>Cache-Control:</strong>&nbsp;'. $cachecontrol. '</p>';};
-			echo '
-			</div>
-			<div class="card-right valign-wrapper" style="width: 30%; display: flex;">
-				&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Retest</span></a>&nbsp;&nbsp;
-			</div>
-			<ul class="collapsible">
-				<li>
-					<div class="collapsible-header">
-						<div class="right"><a href="#!">Help</a></div>
-					</div>
-					<div class="collapsible-body">
-						<strong>Note:</strong> Cloudflare\'s static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.
-					</div>
-				</li>
-			</ul>	
-		</div>
-	</div>
-</div>
-';
-}
-if ($status=="CF-Cache-Status: UPDATING") {echo 
-'
-<div class="row">
-	<div class="col s12">
-		<div class="card horizontal">
-			<div class="card-action top warning">
-				<span class="card-title">Warning</span>
-				<img style="display: inline-block; float: right; margin-top:5px;" width="24px" height="24px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMAAQIDBw0ODxATFBUXGBkaHB4hJyorLC0ubW9wcXN0dXh/i46gr7CytLXFx8jMz9Xz9ff7/VUolP4AAAFaSURBVEjHnZZ9Q4IwEMZJYLUkCUNNpRQwLYWUtvv+X60hpsDee/68PT/Yy213jiOS52Pse46R3MniQOEsup/HA419lBHoiGRPCvtwCwJ9PErsg3eQaHkn8qMSpCp83h9VoNDpue+PKShFXnrf1/gZ0fkHqkCrU2sdgxIMVNz2agVGWl7PixvaBEwbLowvwI4bSetwyp954w/BFIAmr3JzIDvnMzEHSJ3tUzAHIGbxxAaYs3hhA+xZnNoAhN13sAHAc5Ad4DvYDsD2gPWUhIs+pkxH8aIdChaikoOT6iBJDakWDJjZAJM6valFerv/uUA2V3TUXOovU2B7eTUC02fmWijWZlv0dnsqv038Zave3f/o/RVqP99jbUbRqFsgXjUEjfslaKycVRXxRe5BsfISCcuudHdXsn4g+BTZd0NFLxDm/dYhD3XNySwp/pqTIpm6Zi2NhzBG4vbnF/6vTGJVLtFgAAAAAElFTkSuQmCC">
-			</div>
-			<div class="card-content" style="width: 70%;">
-				<span class="flow-text">CF-Cache-Status: Updating</span>
-				<p>
-					Cloudflare\'s CDN cache is currently populating for that resource and the response was served stale from the existing cached item. This status is typically only seen when large and/or very popular resources are being added to the cache.
-				</p>';
-				if ($ray !=='') {echo '<br/><p><strong>Ray ID:</strong>&nbsp;'. $ray. '</p>';}; 
-				if ($cachecontrol !=='') {echo '<p><strong>Cache-Control:</strong>&nbsp;'. $cachecontrol. '</p>';};
-			echo '
-			</div>
-			<div class="card-right valign-wrapper" style="width: 30%; display: flex;">
-				&nbsp;&nbsp;<a href="javascript:history.go(0);" class="btn brand-blue"><i class="material-icons hide-on-med-and-up">refresh</i><span class="hide-on-small-only"> Retest</span></a>&nbsp;&nbsp;
-			</div>
-			<ul class="collapsible">
-				<li>
-					<div class="collapsible-header">
-						<div class="right"><a href="#!">Help</a></div>
-					</div>
-					<div class="collapsible-body">
-						<strong>Note:</strong> Cloudflare\'s static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.
-					</div>
-				</li>
-			</ul>	
-		</div>
-	</div>
-</div>
-';
-}
+
 ?>
 
 
@@ -442,13 +215,12 @@ if ($status=="CF-Cache-Status: UPDATING") {echo
 
 
 		<!-- @include _no-result-note.kit -->
-				
 	</div>
 </section>
 
 
 <!-- @include _footer.kit -->
-<!-- @include _chat-button.kit -->
+<!-- include _chat-button.kit -->
 
 
 

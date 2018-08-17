@@ -1,11 +1,11 @@
 <nav class="search-bar z-depth-0">
 	<div class="container">
 		<div class="nav-wrapper">
-			<form>
+			<form id="url-test-bar" method="get">
 					<div class="input-field">
-						<input id="search" type="search" required placeholder="Resource URL to test" autocomplete="off">
+						<input id="search" name="url" type="search" required placeholder="Resource URL to test" autocomplete="off"<?php if($_GET['url']!==''&&$_GET['url']!==null){echo ' value="'.$_GET['url'].'"';}?>>
 						<label class="label-icon" for="search"><i class="material-icons">search</i></label>
-						<i class="material-icons">close</i>
+						<i id="X" class="material-icons">close</i>
 					</div>
 			</form>
 		</div>

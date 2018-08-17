@@ -6,8 +6,8 @@
 			</div>
 
 			<div class="card-content" style="width: 100%;">
-				<span class="flow-text">Cloudflare not in use</span>
-				<p>The resource tested is from a domain that does not appear to be utilizing Cloudflare.</p>
+				<span class="flow-text">Cloudflare not detected</span>
+				<p>The resource tested is from a domain that does not appear to be utilizing Cloudflare. Neither CF-RAY or CF-Cache-Status were in the header.</p>
 			</div>
 
 			<div class="card-right valign-wrapper" style="width: 0%; display: none;">

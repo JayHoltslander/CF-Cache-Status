@@ -11,4 +11,11 @@ $(document).ready(function(){
   $('ul.tabs').tabs();
   // COLLAPSIBLE
   $('.collapsible').collapsible();
+
+	// CUSTOM CLEARABLE INPUT WITH REFRESH
+	$('#X').click(function(){
+		$('#search').val('');
+		$('#url-test-bar').submit();
+	});
+
 });

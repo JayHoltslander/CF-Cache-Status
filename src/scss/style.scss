@@ -1,11 +1,19 @@
 $brand-color: #F38020;
 $brand-blue: #2c7cb0;
+$brand-blue-light: #c6d8ef;
 $success-color: #79C698;
 $warning-color: #f4a15d;
 $danger-color: #bf223c;
 
 .brand-color { background-color:$brand-color;}
 .brand-blue { background-color:$brand-blue;}
+.brand-blue-light { background-color:$brand-blue-light;}
+.brand-blue-text {color: $brand-blue;}
+.brand-blue-light-text {color: $brand-blue-light;}
+.brand-color-text {color: $brand-color;}
+.success-text {color: $success-color;}
+.warning-text {color: $warning-color;}
+.danger-text {color: $danger-color;}
 
 body {
 	background-color: #e6e6e6;
@@ -68,6 +76,12 @@ a {
 		}
 	}
 }
+
+
+
+
+
+
 .container .nav-wrapper .input-field input[type=search] {
     height: 64px;
 }
@@ -91,6 +105,11 @@ a {
 		flex-flow: row wrap;
 		.card-content {
 			// width: 70%;
+			p {
+				&:not(:last-child) {
+					margin-bottom: 1em;
+				}
+			}
 		}
 		.card-right {
 			position: relative;
@@ -159,9 +178,16 @@ a {
 
 
 
-
-
-
+// REDUCE PARAGRAPH SIZE ON MOBILE
+@media only screen and (max-width: 640px) {
+	p,li {
+		font-size: 13px;
+		transition: all ease 0.3s;
+	}
+	ul.browser-default {
+		padding-left: 16px;
+	}
+}
 
 
 
