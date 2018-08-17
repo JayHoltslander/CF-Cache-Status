@@ -17,6 +17,20 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/.gitignore",
+		"oF": 0
+		},
+	"\/deploy.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/deploy.sh",
+		"oF": 0
+		},
 	"\/dist": {
 		"ft": 65536,
 		"oA": 1,
