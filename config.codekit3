@@ -62,6 +62,13 @@
 		"oAP": "\/dist\/_chat-button.html",
 		"oF": 0
 		},
+	"\/src\/_favicons.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_favicons.html",
+		"oF": 0
+		},
 	"\/src\/_footer.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -153,6 +160,361 @@
 		"oAP": "\/dist\/_search-bar.html",
 		"oF": 0
 		},
+	"\/src\/android-chrome-144x144.png": {
+		"ft": 32768,
+		"iS": 824,
+		"oA": 0,
+		"oAP": "\/dist\/android-chrome-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/android-chrome-192x192.png": {
+		"ft": 32768,
+		"iS": 1014,
+		"oA": 0,
+		"oAP": "\/dist\/android-chrome-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/android-chrome-256x256.png": {
+		"ft": 32768,
+		"iS": 1203,
+		"oA": 0,
+		"oAP": "\/dist\/android-chrome-256x256.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/android-chrome-36x36.png": {
+		"ft": 32768,
+		"iS": 561,
+		"oA": 0,
+		"oAP": "\/dist\/android-chrome-36x36.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/android-chrome-384x384.png": {
+		"ft": 32768,
+		"iS": 1683,
+		"oA": 0,
+		"oAP": "\/dist\/android-chrome-384x384.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/android-chrome-48x48.png": {
+		"ft": 32768,
+		"iS": 625,
+		"oA": 0,
+		"oAP": "\/dist\/android-chrome-48x48.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/android-chrome-512x512.png": {
+		"ft": 32768,
+		"iS": 2002,
+		"oA": 0,
+		"oAP": "\/dist\/android-chrome-512x512.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/android-chrome-72x72.png": {
+		"ft": 32768,
+		"iS": 621,
+		"oA": 0,
+		"oAP": "\/dist\/android-chrome-72x72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/android-chrome-96x96.png": {
+		"ft": 32768,
+		"iS": 645,
+		"oA": 0,
+		"oAP": "\/dist\/android-chrome-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-114x114-precomposed.png": {
+		"ft": 32768,
+		"iS": 869,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-114x114-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-114x114.png": {
+		"ft": 32768,
+		"iS": 693,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-114x114.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-120x120-precomposed.png": {
+		"ft": 32768,
+		"iS": 895,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-120x120-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-120x120.png": {
+		"ft": 32768,
+		"iS": 700,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-120x120.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-144x144-precomposed.png": {
+		"ft": 32768,
+		"iS": 1023,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-144x144-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-144x144.png": {
+		"ft": 32768,
+		"iS": 743,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-152x152-precomposed.png": {
+		"ft": 32768,
+		"iS": 1006,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-152x152-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-152x152.png": {
+		"ft": 32768,
+		"iS": 786,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-152x152.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-180x180-precomposed.png": {
+		"ft": 32768,
+		"iS": 1162,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-180x180-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-180x180.png": {
+		"ft": 32768,
+		"iS": 908,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-180x180.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-57x57-precomposed.png": {
+		"ft": 32768,
+		"iS": 700,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-57x57-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-57x57.png": {
+		"ft": 32768,
+		"iS": 550,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-57x57.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-60x60-precomposed.png": {
+		"ft": 32768,
+		"iS": 645,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-60x60-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-60x60.png": {
+		"ft": 32768,
+		"iS": 535,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-60x60.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-72x72-precomposed.png": {
+		"ft": 32768,
+		"iS": 741,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-72x72-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-72x72.png": {
+		"ft": 32768,
+		"iS": 600,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-72x72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-76x76-precomposed.png": {
+		"ft": 32768,
+		"iS": 754,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-76x76-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-76x76.png": {
+		"ft": 32768,
+		"iS": 601,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-76x76.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon-precomposed.png": {
+		"ft": 32768,
+		"iS": 1162,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 908,
+		"oA": 0,
+		"oAP": "\/dist\/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/browserconfig.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/browserconfig.xml",
+		"oF": 0
+		},
+	"\/src\/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 441,
+		"oA": 0,
+		"oAP": "\/dist\/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 509,
+		"oA": 0,
+		"oAP": "\/dist\/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/favicon.ico",
+		"oF": 0
+		},
 	"\/src\/index.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -170,6 +532,61 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/src\/mstile-144x144.png": {
+		"ft": 32768,
+		"iS": 824,
+		"oA": 0,
+		"oAP": "\/dist\/mstile-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/mstile-150x150.png": {
+		"ft": 32768,
+		"iS": 850,
+		"oA": 0,
+		"oAP": "\/dist\/mstile-150x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/mstile-310x150.png": {
+		"ft": 32768,
+		"iS": 965,
+		"oA": 0,
+		"oAP": "\/dist\/mstile-310x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/mstile-310x310.png": {
+		"ft": 32768,
+		"iS": 1607,
+		"oA": 0,
+		"oAP": "\/dist\/mstile-310x310.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/src\/mstile-70x70.png": {
+		"ft": 32768,
+		"iS": 720,
+		"oA": 0,
+		"oAP": "\/dist\/mstile-70x70.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/src\/result-details.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -183,6 +600,16 @@
 		"oA": 0,
 		"oAP": "\/dist\/result-not-cloudflare.php",
 		"oF": 0
+		},
+	"\/src\/safari-pinned-tab.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "\/dist\/safari-pinned-tab.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/src\/scss\/.sass-cache\/00a0fc394bd70a4277f6faa400718d6205ff2af4\/materialize.scssc": {
 		"cB": 0,
@@ -271,6 +698,13 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/src\/site.webmanifest": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/dist\/site.webmanifest",
+		"oF": 0
+		},
 	"\/src\/test-timed-out.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -301,9 +735,9 @@
 	"creationDate": 555994416,
 	"displayValue": "CF-Cache-Status",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-confession",
+	"iconImageName": "\/src\/apple-touch-icon-114x114-precomposed.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 556133244
+	"lastBuiltDate": 556217193
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
