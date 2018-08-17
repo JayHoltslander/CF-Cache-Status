@@ -89,122 +89,125 @@ $status = '';
 $ray = '';
 $cachecontrol = '';
 
-foreach($headers as $head) {
-	if (strpos($head, 'CF-Cache-Status') !== false) {
-		$status = $head;
-	}
-	if (strpos($head, 'CF-RAY') !== false) {
-		$ray = $head;
-	}
-	if (strpos($head, 'Cache-Control') !== false) {
-		$cachecontrol = $head;
-	}
-	if ($ray !== '') {
-		$cachecontrol = str_replace('Cache-Control: ', '', $cachecontrol);
-	}
-	if ($ray !== '') {
-		$ray = str_replace('CF-RAY: ', '', $ray);
-		// DATA CENTERS - https://www.cloudflarestatus.com/
-		// NORTH AMERICA
-		$ray = str_replace('-IAD','<br/>(Ashburn, VA, United States)', $ray);
-		$ray = str_replace('-ATL','<br/>(Atlanta, GA, United States)', $ray);
-		$ray = str_replace('-BOS','<br/>(Boston, MA, United States)', $ray);
-		$ray = str_replace('-YYC','<br/>(Calgary, AB, Canada)', $ray);
-		$ray = str_replace('-ORD','<br/>(Chicago, IL, United States)', $ray);
-		$ray = str_replace('-DFW','<br/>(Dallas, TX, United States)', $ray);
-		$ray = str_replace('-DEN','<br/>(Denver, CO, United States)', $ray);
-		$ray = str_replace('-DTW','<br/>(Detroit, MI, United States)', $ray);
-		$ray = str_replace('-IAH','<br/>(Houston, TX, United States)', $ray);
-		$ray = str_replace('-IND','<br/>(Indianapolis, IN, United States)', $ray);
-		$ray = str_replace('-JAX','<br/>(Jacksonville, FL, United States)', $ray);
-		$ray = str_replace('-MCI','<br/>(Kansas City, MO, United States)', $ray);
-		$ray = str_replace('-LAS','<br/>(Las Vegas, NV, United States)', $ray);
-		$ray = str_replace('-LAX','<br/>(Los Angeles, CA, United States)', $ray);
-		$ray = str_replace('-MFE','<br/>(McAllen, TX, United States)', $ray);
-		$ray = str_replace('-MEM','<br/>(Memphis, TN, United States)', $ray);
-		$ray = str_replace('-MEX','<br/>(Mexico City, Mexico)', $ray);
-		$ray = str_replace('-MIA','<br/>(Miami, FL, United States)', $ray);
-		$ray = str_replace('-MSP','<br/>(Minneapolis, MN, United States)', $ray);
-		$ray = str_replace('-MGM','<br/>(Montgomery, AL, United States)', $ray);
-		$ray = str_replace('-YUL','<br/>(Montréal, QC, Canada)', $ray);
-		$ray = str_replace('-BNA','<br/>(Nashville, TN, United States)', $ray);
-		$ray = str_replace('-EWR','<br/>(Newark, NJ, United States)', $ray);
-		$ray = str_replace('-OMA','<br/>(Omaha, NE, United States)', $ray);
-		$ray = str_replace('-PHX','<br/>(Phoenix, AZ, United States)', $ray);
-		$ray = str_replace('-PIT','<br/>(Pittsburgh, PA, United States)', $ray);
-		$ray = str_replace('-PDX','<br/>(Portland, OR, United States)', $ray);
-		$ray = str_replace('-RIC','<br/>(Richmond, Virginia)', $ray);
-		$ray = str_replace('-SMF','<br/>(Sacramento, CA, United States)', $ray);
-		$ray = str_replace('-SLC','<br/>(Salt Lake City, UT, United States)', $ray);
-		$ray = str_replace('-SAN','<br/>(San Diego, CA, United States)', $ray);
-		$ray = str_replace('-SJC','<br/>(San Jose, CA, United States)', $ray);
-		$ray = str_replace('-YXE','<br/>(Saskatoon, SK, Canada)', $ray);
-		$ray = str_replace('-SEA','<br/>(Seattle, WA, United States)', $ray);
-		$ray = str_replace('-STL','<br/>(St. Louis, MO, United States)', $ray);
-		$ray = str_replace('-TPA','<br/>(Tampa, FL, United States)', $ray);
-		$ray = str_replace('-YYZ','<br/>(Toronto, ON, Canada)', $ray);
-		$ray = str_replace('-YVR','<br/>(Vancouver, BC, Canada)', $ray);
-		$ray = str_replace('-TLH','<br/>(Tallahassee, FL, United States)', $ray);
-		$ray = str_replace('-YWG','<br/>(Winnipeg, MB, Canada)', $ray);
-		// EUROPE
-		$ray = str_replace('-AMS','<br/>(Amsterdam, Netherlands)', $ray);
-		$ray = str_replace('-ATH','<br/>(Athens, Greece)', $ray);
-		$ray = str_replace('-BCN','<br/>(Barcelona, Spain)', $ray);
-		$ray = str_replace('-BEG','<br/>(Belgrade, Serbia)', $ray);
-		$ray = str_replace('-TXL','<br/>(Berlin, Germany)', $ray);
-		$ray = str_replace('-BRU','<br/>(Brussels, Belgium)', $ray);
-		$ray = str_replace('-OTP','<br/>(Bucharest, Romania)', $ray);
-		$ray = str_replace('-BUD','<br/>(Budapest, Hungary)', $ray);
-		$ray = str_replace('-KIV','<br/>(Chișinău, Moldova)', $ray);
-		$ray = str_replace('-CPH','<br/>(Copenhagen, Denmark)', $ray);
-		$ray = str_replace('-DUB','<br/>(Dublin, Ireland)', $ray);
-		$ray = str_replace('-DUS','<br/>(Düsseldorf, Germany)', $ray);
-		$ray = str_replace('-EDI','<br/>(Edinburgh, United Kingdom)', $ray);
-		$ray = str_replace('-FRA','<br/>(Frankfurt, Germany)', $ray);
-		$ray = str_replace('-HAM','<br/>(Hamburg, Germany)', $ray);
-		$ray = str_replace('-HEL','<br/>(Helsinki, Finland)', $ray);
-		$ray = str_replace('-IST','<br/>(Istanbul, Turkey)', $ray);
-		$ray = str_replace('-KBP','<br/>(Kiev, Ukraine)', $ray);
-		$ray = str_replace('-LIS','<br/>(Lisbon, Portugal)', $ray);
-		$ray = str_replace('-LHR','<br/>(London, United Kingdom)', $ray);
-		$ray = str_replace('-LUX','<br/>(Luxembourg City, Luxembourg)', $ray);
-		$ray = str_replace('-MAD','<br/>(Madrid, Spain)', $ray);
-		$ray = str_replace('-MAN','<br/>(Manchester, United Kingdom)', $ray);
-		$ray = str_replace('-MRS','<br/>(Marseille, France)', $ray);
-		$ray = str_replace('-MXP','<br/>(Milan, Italy)', $ray);
-		$ray = str_replace('-DME','<br/>(Moscow, Russia)', $ray);
-		$ray = str_replace('-MUC','<br/>(Munich, Germany)', $ray);
-		$ray = str_replace('-OSL','<br/>(Oslo, Norway)', $ray);
-		$ray = str_replace('-CDG','<br/>(Paris, France)', $ray);
-		$ray = str_replace('-PRG','<br/>(Prague, Czech Republic)', $ray);
-		$ray = str_replace('-KEF','<br/>(Reykjavík, Iceland)', $ray);
-		$ray = str_replace('-RIX','<br/>(Riga, Latvia)', $ray);
-		$ray = str_replace('-FCO','<br/>(Rome, Italy)', $ray);
-		$ray = str_replace('-SOF','<br/>(Sofia, Bulgaria)', $ray);
-		$ray = str_replace('-ARN','<br/>(Stockholm, Sweden)', $ray);
-		$ray = str_replace('-TLL','<br/>(Tallinn, Estonia)', $ray);
-		$ray = str_replace('-VIE','<br/>(Vienna, Austria)', $ray);
-		$ray = str_replace('-VNO','<br/>(Vilnius, Lithuania)', $ray);
-		$ray = str_replace('-WAW','<br/>(Warsaw, Poland)', $ray);
-		$ray = str_replace('-ZAG','<br/>(Zagreb, Croatia)', $ray);
-		$ray = str_replace('-ZRH','<br/>(Zürich, Switzerland)', $ray);
-		// LATIN AMERICA & THE CARIBBEAN
-		$ray = str_replace('-BOG','<br/>(Bogotá, Colombia)', $ray);
-		$ray = str_replace('-EZE','<br/>(Buenos Aires, Argentina)', $ray);
-		$ray = str_replace('-LIM','<br/>(Lima, Peru)', $ray);
-		$ray = str_replace('-MDE','<br/>(Medellín, Colombia)', $ray);
-		$ray = str_replace('-PTY','<br/>(Panama City, Panama)', $ray);
-		$ray = str_replace('-UIO','<br/>(Quito, Ecuador)', $ray);
-		$ray = str_replace('-GIG','<br/>(Rio de Janeiro, Brazil)', $ray);
-		$ray = str_replace('-GRU','<br/>(São Paulo, Brazil)', $ray);
-		$ray = str_replace('-SCL','<br/>(Valparaíso, Chile)', $ray);
-		$ray = str_replace('-CUR','<br/>(Willemstad, Curaçao)', $ray);
-		// OCEANIA
-		$ray = str_replace('-AKL','<br/>(Auckland, New Zealand)', $ray);
-		$ray = str_replace('-BNE','<br/>(Brisbane, QLD, Australia)', $ray);
-		$ray = str_replace('-MEL','<br/>(Melbourne, VIC, Australia)', $ray);
-		$ray = str_replace('-PER','<br/>(Perth, WA, Australia)', $ray);
-		$ray = str_replace('-SYD','<br/>(Sydney, NSW, Australia)', $ray);
+if (is_array($headers) || is_object($headers))
+{
+	foreach($headers as $head) {
+		if (strpos($head, 'CF-Cache-Status') !== false) {
+			$status = $head;
+		}
+		if (strpos($head, 'CF-RAY') !== false) {
+			$ray = $head;
+		}
+		if (strpos($head, 'Cache-Control') !== false) {
+			$cachecontrol = $head;
+		}
+		if ($ray !== '') {
+			$cachecontrol = str_replace('Cache-Control: ', '', $cachecontrol);
+		}
+		if ($ray !== '') {
+			$ray = str_replace('CF-RAY: ', '', $ray);
+			// DATA CENTERS - https://www.cloudflarestatus.com/
+			// NORTH AMERICA
+			$ray = str_replace('-IAD','<br/>(Ashburn, VA, United States)', $ray);
+			$ray = str_replace('-ATL','<br/>(Atlanta, GA, United States)', $ray);
+			$ray = str_replace('-BOS','<br/>(Boston, MA, United States)', $ray);
+			$ray = str_replace('-YYC','<br/>(Calgary, AB, Canada)', $ray);
+			$ray = str_replace('-ORD','<br/>(Chicago, IL, United States)', $ray);
+			$ray = str_replace('-DFW','<br/>(Dallas, TX, United States)', $ray);
+			$ray = str_replace('-DEN','<br/>(Denver, CO, United States)', $ray);
+			$ray = str_replace('-DTW','<br/>(Detroit, MI, United States)', $ray);
+			$ray = str_replace('-IAH','<br/>(Houston, TX, United States)', $ray);
+			$ray = str_replace('-IND','<br/>(Indianapolis, IN, United States)', $ray);
+			$ray = str_replace('-JAX','<br/>(Jacksonville, FL, United States)', $ray);
+			$ray = str_replace('-MCI','<br/>(Kansas City, MO, United States)', $ray);
+			$ray = str_replace('-LAS','<br/>(Las Vegas, NV, United States)', $ray);
+			$ray = str_replace('-LAX','<br/>(Los Angeles, CA, United States)', $ray);
+			$ray = str_replace('-MFE','<br/>(McAllen, TX, United States)', $ray);
+			$ray = str_replace('-MEM','<br/>(Memphis, TN, United States)', $ray);
+			$ray = str_replace('-MEX','<br/>(Mexico City, Mexico)', $ray);
+			$ray = str_replace('-MIA','<br/>(Miami, FL, United States)', $ray);
+			$ray = str_replace('-MSP','<br/>(Minneapolis, MN, United States)', $ray);
+			$ray = str_replace('-MGM','<br/>(Montgomery, AL, United States)', $ray);
+			$ray = str_replace('-YUL','<br/>(Montréal, QC, Canada)', $ray);
+			$ray = str_replace('-BNA','<br/>(Nashville, TN, United States)', $ray);
+			$ray = str_replace('-EWR','<br/>(Newark, NJ, United States)', $ray);
+			$ray = str_replace('-OMA','<br/>(Omaha, NE, United States)', $ray);
+			$ray = str_replace('-PHX','<br/>(Phoenix, AZ, United States)', $ray);
+			$ray = str_replace('-PIT','<br/>(Pittsburgh, PA, United States)', $ray);
+			$ray = str_replace('-PDX','<br/>(Portland, OR, United States)', $ray);
+			$ray = str_replace('-RIC','<br/>(Richmond, Virginia)', $ray);
+			$ray = str_replace('-SMF','<br/>(Sacramento, CA, United States)', $ray);
+			$ray = str_replace('-SLC','<br/>(Salt Lake City, UT, United States)', $ray);
+			$ray = str_replace('-SAN','<br/>(San Diego, CA, United States)', $ray);
+			$ray = str_replace('-SJC','<br/>(San Jose, CA, United States)', $ray);
+			$ray = str_replace('-YXE','<br/>(Saskatoon, SK, Canada)', $ray);
+			$ray = str_replace('-SEA','<br/>(Seattle, WA, United States)', $ray);
+			$ray = str_replace('-STL','<br/>(St. Louis, MO, United States)', $ray);
+			$ray = str_replace('-TPA','<br/>(Tampa, FL, United States)', $ray);
+			$ray = str_replace('-YYZ','<br/>(Toronto, ON, Canada)', $ray);
+			$ray = str_replace('-YVR','<br/>(Vancouver, BC, Canada)', $ray);
+			$ray = str_replace('-TLH','<br/>(Tallahassee, FL, United States)', $ray);
+			$ray = str_replace('-YWG','<br/>(Winnipeg, MB, Canada)', $ray);
+			// EUROPE
+			$ray = str_replace('-AMS','<br/>(Amsterdam, Netherlands)', $ray);
+			$ray = str_replace('-ATH','<br/>(Athens, Greece)', $ray);
+			$ray = str_replace('-BCN','<br/>(Barcelona, Spain)', $ray);
+			$ray = str_replace('-BEG','<br/>(Belgrade, Serbia)', $ray);
+			$ray = str_replace('-TXL','<br/>(Berlin, Germany)', $ray);
+			$ray = str_replace('-BRU','<br/>(Brussels, Belgium)', $ray);
+			$ray = str_replace('-OTP','<br/>(Bucharest, Romania)', $ray);
+			$ray = str_replace('-BUD','<br/>(Budapest, Hungary)', $ray);
+			$ray = str_replace('-KIV','<br/>(Chișinău, Moldova)', $ray);
+			$ray = str_replace('-CPH','<br/>(Copenhagen, Denmark)', $ray);
+			$ray = str_replace('-DUB','<br/>(Dublin, Ireland)', $ray);
+			$ray = str_replace('-DUS','<br/>(Düsseldorf, Germany)', $ray);
+			$ray = str_replace('-EDI','<br/>(Edinburgh, United Kingdom)', $ray);
+			$ray = str_replace('-FRA','<br/>(Frankfurt, Germany)', $ray);
+			$ray = str_replace('-HAM','<br/>(Hamburg, Germany)', $ray);
+			$ray = str_replace('-HEL','<br/>(Helsinki, Finland)', $ray);
+			$ray = str_replace('-IST','<br/>(Istanbul, Turkey)', $ray);
+			$ray = str_replace('-KBP','<br/>(Kiev, Ukraine)', $ray);
+			$ray = str_replace('-LIS','<br/>(Lisbon, Portugal)', $ray);
+			$ray = str_replace('-LHR','<br/>(London, United Kingdom)', $ray);
+			$ray = str_replace('-LUX','<br/>(Luxembourg City, Luxembourg)', $ray);
+			$ray = str_replace('-MAD','<br/>(Madrid, Spain)', $ray);
+			$ray = str_replace('-MAN','<br/>(Manchester, United Kingdom)', $ray);
+			$ray = str_replace('-MRS','<br/>(Marseille, France)', $ray);
+			$ray = str_replace('-MXP','<br/>(Milan, Italy)', $ray);
+			$ray = str_replace('-DME','<br/>(Moscow, Russia)', $ray);
+			$ray = str_replace('-MUC','<br/>(Munich, Germany)', $ray);
+			$ray = str_replace('-OSL','<br/>(Oslo, Norway)', $ray);
+			$ray = str_replace('-CDG','<br/>(Paris, France)', $ray);
+			$ray = str_replace('-PRG','<br/>(Prague, Czech Republic)', $ray);
+			$ray = str_replace('-KEF','<br/>(Reykjavík, Iceland)', $ray);
+			$ray = str_replace('-RIX','<br/>(Riga, Latvia)', $ray);
+			$ray = str_replace('-FCO','<br/>(Rome, Italy)', $ray);
+			$ray = str_replace('-SOF','<br/>(Sofia, Bulgaria)', $ray);
+			$ray = str_replace('-ARN','<br/>(Stockholm, Sweden)', $ray);
+			$ray = str_replace('-TLL','<br/>(Tallinn, Estonia)', $ray);
+			$ray = str_replace('-VIE','<br/>(Vienna, Austria)', $ray);
+			$ray = str_replace('-VNO','<br/>(Vilnius, Lithuania)', $ray);
+			$ray = str_replace('-WAW','<br/>(Warsaw, Poland)', $ray);
+			$ray = str_replace('-ZAG','<br/>(Zagreb, Croatia)', $ray);
+			$ray = str_replace('-ZRH','<br/>(Zürich, Switzerland)', $ray);
+			// LATIN AMERICA & THE CARIBBEAN
+			$ray = str_replace('-BOG','<br/>(Bogotá, Colombia)', $ray);
+			$ray = str_replace('-EZE','<br/>(Buenos Aires, Argentina)', $ray);
+			$ray = str_replace('-LIM','<br/>(Lima, Peru)', $ray);
+			$ray = str_replace('-MDE','<br/>(Medellín, Colombia)', $ray);
+			$ray = str_replace('-PTY','<br/>(Panama City, Panama)', $ray);
+			$ray = str_replace('-UIO','<br/>(Quito, Ecuador)', $ray);
+			$ray = str_replace('-GIG','<br/>(Rio de Janeiro, Brazil)', $ray);
+			$ray = str_replace('-GRU','<br/>(São Paulo, Brazil)', $ray);
+			$ray = str_replace('-SCL','<br/>(Valparaíso, Chile)', $ray);
+			$ray = str_replace('-CUR','<br/>(Willemstad, Curaçao)', $ray);
+			// OCEANIA
+			$ray = str_replace('-AKL','<br/>(Auckland, New Zealand)', $ray);
+			$ray = str_replace('-BNE','<br/>(Brisbane, QLD, Australia)', $ray);
+			$ray = str_replace('-MEL','<br/>(Melbourne, VIC, Australia)', $ray);
+			$ray = str_replace('-PER','<br/>(Perth, WA, Australia)', $ray);
+			$ray = str_replace('-SYD','<br/>(Sydney, NSW, Australia)', $ray);
+		}
 	}
 }
 // IF RAY ID AND CACHE STATUS AREN'T SEEN
@@ -254,11 +257,11 @@ else {
 						<p>
 							<h5 class="flow-text">What if there no "CF-Cache-Status" header?</h5>
 							<p>
-								If the "CF-Cache-Status" header is missing (but you are seeing other Cloudflare headers such as "CF-RAY"), this can indicate that the resource is not something Cloudflare would ordinarily cache. There is a <a href="https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-">list of file extensions Cloudflare caches by default</a> and you can utilise Page Rules to implement <a href="https://support.cloudflare.com/hc/en-us/articles/200172266-What-do-the-custom-caching-options-mean-in-Page-Rules-">custom caching options</a> (including static content and HTML).
+								If the "CF-Cache-Status" header is missing (but you are seeing other Cloudflare headers such as "CF-RAY"), this can indicate that the resource is not something Cloudflare would ordinarily cache. There is a <a href="https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-">list of file extensions Cloudflare caches by default</a> and you can utilize Page Rules to implement <a href="https://support.cloudflare.com/hc/en-us/articles/200172266-What-do-the-custom-caching-options-mean-in-Page-Rules-">custom caching options</a> (including static content and HTML).
 							</p>
 							<h6>Notes:</h6>
 							<ul class="browser-default">
-								<li>Cloudflare will not cache your site or static content if you have  no-cache and private headers coming from your server. If you want Cloudflare to cache content on your site, please make sure that the headers are changed to allow caching. If you don't know what your headers are returning, please use a service like <a href="http://redbot.org/">Redbot</a> to check.</li>
+								<li>Cloudflare will not cache your site or static content if you have  no-cache and private headers coming from your server. If you want Cloudflare to cache content on your site, please make sure that the headers are changed to allow caching. If you don't know what your headers are returning, click the "Help" link at the bottom of your test result above or try <a href="http://redbot.org/">Redbot</a>.</li>
 								<li>Cloudflare does not cache off-site or third-party resources (widgets, etc.).</li>
 								<li>Cloudflare will only proxy and cache records where Cloudflare is proxying that record in your DNS settings.</li>
 								<li>You can adjust your caching level and cache TTL in <a href="https://dash.cloudflare.com/">your Cloudflare</a> caching settings under the section '<strong>Speed</strong>'.</li>

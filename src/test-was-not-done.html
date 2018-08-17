@@ -9,6 +9,8 @@
 				<span class="flow-text">CF-Cache-Status</span>
 				<p>"CF-Cache-Status" is found in the response header when a resource is cached on <a href="https://www.cloudflare.com/cdn/">Cloudflare's CDN</a>.</p>
 				<p>This tool uses PHP's get_headers function to fetch the header information for a resource, looks for the CF-Cache-Status in the response, and then reports on what is found. Enter any URL above to test.</p>
+				<p><strong>Note:</strong> Redirects will not be followed.</p>
+				<p><a href="https://cf-cache-status.net/?url=https%3A%2F%2Fcloudflare.com">Example 1</a> | <a href="https://cf-cache-status.net/?url=https%3A%2F%2Fwww.cnn.com">Example 2</a></p>
 			</div>
 
 			<div class="card-right valign-wrapper" style="width: 0%; display: none;">
@@ -21,7 +23,8 @@
 						<div class="right"><a href="#!">Help</a></div>
 					</div>
 					<div class="collapsible-body">
-						<strong>Note:</strong> Cloudflare's static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.
+						To get started enter a full path to a resource in the blue search bar above. Include the protocol like http:// or https:// and any subdomains desired like www.
+						<p><strong>Note:</strong> Cloudflare's static content caching is dependent on both (a) where most of your visitors are coming from and which Cloudflare datacenter they are hitting, and (b) how may times those resources are requested at the specific datacenter. As such, Cloudflare does not cache the same resources for your site globally at every <a href="https://www.cloudflare.com/network/">datacenter location</a>.</p>
 					</div>
 				</li>
 			</ul>	

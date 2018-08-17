@@ -11,7 +11,7 @@ if ($status=="CF-Cache-Status: HIT") {?>
 			<div class="card-content" style="width: 70%;">
 				<span class="flow-text">CF-Cache-Status: <span class="success-text">Hit</span></span>
 				<p>
-					The resource is in Cloudflare's CDN cache, and was served from there.
+					The resource requested is in Cloudflare's CDN cache, and was served from there.
 				</p>
 				<?php
 					include 'result-details.php';

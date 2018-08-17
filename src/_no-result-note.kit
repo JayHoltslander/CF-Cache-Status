@@ -5,11 +5,11 @@
 				<p>
 					<h5 class="flow-text">What if there no "CF-Cache-Status" header?</h5>
 					<p>
-						If the "CF-Cache-Status" header is missing (but you are seeing other Cloudflare headers such as "CF-RAY"), this can indicate that the resource is not something Cloudflare would ordinarily cache. There is a <a href="https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-">list of file extensions Cloudflare caches by default</a> and you can utilise Page Rules to implement <a href="https://support.cloudflare.com/hc/en-us/articles/200172266-What-do-the-custom-caching-options-mean-in-Page-Rules-">custom caching options</a> (including static content and HTML).
+						If the "CF-Cache-Status" header is missing (but you are seeing other Cloudflare headers such as "CF-RAY"), this can indicate that the resource is not something Cloudflare would ordinarily cache. There is a <a href="https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-">list of file extensions Cloudflare caches by default</a> and you can utilize Page Rules to implement <a href="https://support.cloudflare.com/hc/en-us/articles/200172266-What-do-the-custom-caching-options-mean-in-Page-Rules-">custom caching options</a> (including static content and HTML).
 					</p>
 					<h6>Notes:</h6>
 					<ul class="browser-default">
-						<li>Cloudflare will not cache your site or static content if you have  no-cache and private headers coming from your server. If you want Cloudflare to cache content on your site, please make sure that the headers are changed to allow caching. If you don't know what your headers are returning, please use a service like <a href="http://redbot.org/">Redbot</a> to check.</li>
+						<li>Cloudflare will not cache your site or static content if you have  no-cache and private headers coming from your server. If you want Cloudflare to cache content on your site, please make sure that the headers are changed to allow caching. If you don't know what your headers are returning, click the "Help" link at the bottom of your test result above or try <a href="http://redbot.org/">Redbot</a>.</li>
 						<li>Cloudflare does not cache off-site or third-party resources (widgets, etc.).</li>
 						<li>Cloudflare will only proxy and cache records where Cloudflare is proxying that record in your DNS settings.</li>
 						<li>You can adjust your caching level and cache TTL in <a href="https://dash.cloudflare.com/">your Cloudflare</a> caching settings under the section '<strong>Speed</strong>'.</li>
