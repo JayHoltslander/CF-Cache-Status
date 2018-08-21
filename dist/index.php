@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-	
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w,d,s,l,i){w[l]=w[l]||[];
@@ -10,7 +9,8 @@
 			j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-P9X3J7M');
 	</script>
-	<!-- End Google Tag Manager -->
+	<!-- End Google Tag Manager -->	
+
 
   <meta charset="UTF-8">
   <title>CF-Cache-Status</title>
@@ -34,9 +34,15 @@
 	<meta name="theme-color" content="#ffffff">
 	<script defer src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 	<script defer src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js'></script>
-	<script defer src="js/index.js"></script>
+	<script defer src="js/index.js?2635476235"></script>
 </head>
 <body>
+
+	<!-- Google Tag Manager -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9X3J7M" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+
 
 	<nav class="navbar white">
 		<div class="nav-wrapper">
@@ -91,6 +97,10 @@ ini_set('default_socket_timeout', 5);
 // GET HEADERS
 $headers=false;
 if (isset($_GET['url']) && $_GET['url']!==''){
+	
+	// DEFINE USERAGENT
+	ini_set('user_agent', 'Mozilla/5.0');
+
 	$headers = get_headers ($_GET['url']);
 	// UNCOMMENT TO TEST
 	// var_dump($headers);
@@ -331,8 +341,4 @@ else {
 
 
 </body>
-	<!-- Google Tag Manager -->
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9X3J7M" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-	</noscript>
 </html>

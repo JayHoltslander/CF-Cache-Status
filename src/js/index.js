@@ -14,6 +14,7 @@ $(document).ready(function(){
 
 	// CUSTOM CLEARABLE INPUT WITH REFRESH
 	$('#X').click(function(){
+		console.log('reached');
 		$('#search').val('');
 		$('#url-test-bar').submit();
 	});
