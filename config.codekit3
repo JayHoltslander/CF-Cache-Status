@@ -8,7 +8,7 @@
 		},
 	{
 		"name": "Run UnCSS",
-		"scriptSourceString": "uncss dist\/*.php  > dist\/css\/optimized.css",
+		"scriptSourceString": "uncss dist\/*.php dist\/*.html > dist\/css\/optimized.css",
 		"scriptType": 1,
 		"scriptUUIDString": "BAA5A9BC-7685-4B87-8215-EA330D1BC05B",
 		"stepType": 2,
@@ -737,7 +737,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/src\/apple-touch-icon-114x114-precomposed.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 556217193
+	"lastBuiltDate": 556225382
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
