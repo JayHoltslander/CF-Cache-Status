@@ -661,7 +661,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/material-icons.css",
+		"oAP": "\/dist\/scss\/material-icons.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -674,7 +674,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/materialize.css",
+		"oAP": "\/dist\/scss\/materialize.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 0
@@ -687,7 +687,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/normalize.css",
+		"oAP": "\/dist\/scss\/normalize.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -700,7 +700,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/style.css",
+		"oAP": "\/dist\/scss\/style.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -748,7 +748,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -2139,7 +2139,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888\/CF-Cache-Status\/dist\/",
+	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -2548,7 +2548,7 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"outputFormat": 0,
-		"quality": 75
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -2656,7 +2656,7 @@
 		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 2,
+		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
