@@ -10,6 +10,6 @@ rsync -ru dist/.htaccess serverpilot@159.203.12.174:apps/cf-cache-status/public/
 
 echo rsyncing folder \"/css\" to remote host... &&
 rsync -ru dist/css/ serverpilot@159.203.12.174:apps/cf-cache-status/public/css/ --delete &&
-echo rsyncing folder \"/content\" to remote host... &&
+echo rsyncing folder \"/js\" to remote host... &&
 rsync -ru dist/js/ serverpilot@159.203.12.174:apps/cf-cache-status/public/js/ --delete &&
 echo DONE!
