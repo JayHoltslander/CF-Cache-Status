@@ -6,9 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/materialize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css?2">
 	<link rel="stylesheet" href="css/material-icons.css">
-	<!-- <link rel="stylesheet" href="css/optimized.css"> -->
+	<!-- <link rel="stylesheet" href="css/optimized.css?2"> -->
+
+	<meta property="og:title" content="CF-Cache-Status" />
+	<meta property="og:site_name" data-page-subject="true" content="CF-Cache-Status" />
+	<meta property="og:url" content="http://cf-cache-status.net" />
+	<meta property="og:description" name="description" content="Test the caching of a URL on Cloudflare's CDN." />
+	<meta property="og:image" content="ogimage.jpg">
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@j_holtslander">
+	<meta name="twitter:title" content="CF-Cache-Status.net">
+	<meta name="twitter:description" content="Test the caching of a URL on Cloudflare's CDN.">
+	<meta name="twitter:image" content="https://cf-cache-status.net/ogimage.jpg">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=A07RLdrO2d">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=A07RLdrO2d">

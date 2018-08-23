@@ -64,6 +64,7 @@ a {
 
 .search-bar {
 	background-color: $brand-blue;
+	height: 64px!important;
 	input {
 		color: rgba(255,255,255,0.7);
 		&::placeholder {
@@ -180,6 +181,10 @@ a {
 
 // REDUCE PARAGRAPH SIZE ON MOBILE
 @media only screen and (max-width: 640px) {
+	.navbar .brand-logo {
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
 	p,li {
 		font-size: 13px;
 		transition: all ease 0.3s;
@@ -187,6 +192,23 @@ a {
 	ul.browser-default {
 		padding-left: 16px;
 	}
+	section {
+		padding: 16px 0 0 0;
+	}
+	.row .col {
+		padding: initial;
+	}
+}
+
+
+
+
+// NAVBAR FIX FOR MATERIALIZE
+@media only screen and (min-width: 601px) {
+	nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+		height: 64px;
+		line-height: 64px;
+	}	
 }
 
 

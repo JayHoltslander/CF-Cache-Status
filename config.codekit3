@@ -8,7 +8,7 @@
 		},
 	{
 		"name": "Run UnCSS",
-		"scriptSourceString": "uncss dist\/*.php  > dist\/css\/optimized.css",
+		"scriptSourceString": "uncss dist\/index.php > dist\/css\/optimized.css",
 		"scriptType": 1,
 		"scriptUUIDString": "BAA5A9BC-7685-4B87-8215-EA330D1BC05B",
 		"stepType": 2,
@@ -88,6 +88,13 @@
 		"ft": 2048,
 		"oA": 1,
 		"oAP": "\/dist\/_no-result-note.html",
+		"oF": 0
+		},
+	"\/src\/_opengraph.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/dist\/_opengraph.html",
 		"oF": 0
 		},
 	"\/src\/_result-expired.kit": {
@@ -735,9 +742,9 @@
 	"creationDate": 555994416,
 	"displayValue": "CF-Cache-Status",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "\/src\/apple-touch-icon-114x114-precomposed.png",
+	"iconImageName": "\/src\/apple-touch-icon-120x120.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 556217193
+	"lastBuiltDate": 556426813
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2541,7 +2548,7 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"outputFormat": 0,
-		"quality": 100
+		"quality": 75
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
