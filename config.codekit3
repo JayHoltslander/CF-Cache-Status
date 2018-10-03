@@ -1,5 +1,5 @@
 {
-"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https://codekitapp.com/",
 "buildSteps": [
 	{
 		"name": "Process All Remaining Files and Folders",
@@ -8,36 +8,36 @@
 		},
 	{
 		"name": "Run UnCSS",
-		"scriptSourceString": "uncss dist\/*.php dist\/*.html > dist\/css\/optimized.css",
+		"scriptSourceString": "uncss dist/*.php dist/*.html > dist/css/optimized.css",
 		"scriptType": 1,
 		"scriptUUIDString": "BAA5A9BC-7685-4B87-8215-EA330D1BC05B",
 		"stepType": 2,
 		"uuidString": "F8D85D71-8045-4FF0-A404-D56DDB1F934A"
 		}
 	],
-"creatorBuild": "26680",
+"creatorBuild": "28901",
 "files": {
-	"\/.gitignore": {
+	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/.gitignore",
+		"oAP": "/dist/.gitignore",
 		"oF": 0
 		},
-	"\/deploy.sh": {
+	"/deploy.sh": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/deploy.sh",
+		"oAP": "/dist/deploy.sh",
 		"oF": 0
 		},
-	"\/dist": {
+	"/dist": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "\/dist\/dist",
+		"oAP": "/dist/dist",
 		"oF": 0
 		},
-	"\/README.md": {
+	"/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -46,7 +46,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/dist\/README.html",
+		"oAP": "/dist/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -55,605 +55,605 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/src\/_chat-button.kit": {
+	"/src/_chat-button.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_chat-button.html",
+		"oAP": "/dist/_chat-button.html",
 		"oF": 0
 		},
-	"\/src\/_favicons.kit": {
+	"/src/_favicons.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_favicons.html",
+		"oAP": "/dist/_favicons.html",
 		"oF": 0
 		},
-	"\/src\/_footer.kit": {
+	"/src/_footer.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_footer.html",
+		"oAP": "/dist/_footer.html",
 		"oF": 0
 		},
-	"\/src\/_navbar.kit": {
+	"/src/_navbar.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_navbar.html",
+		"oAP": "/dist/_navbar.html",
 		"oF": 0
 		},
-	"\/src\/_no-result-note.kit": {
+	"/src/_no-result-note.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_no-result-note.html",
+		"oAP": "/dist/_no-result-note.html",
 		"oF": 0
 		},
-	"\/src\/_opengraph.kit": {
+	"/src/_opengraph.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_opengraph.html",
+		"oAP": "/dist/_opengraph.html",
 		"oF": 0
 		},
-	"\/src\/_result-expired.kit": {
+	"/src/_result-expired.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_result-expired.html",
+		"oAP": "/dist/_result-expired.html",
 		"oF": 0
 		},
-	"\/src\/_result-hit.kit": {
+	"/src/_result-hit.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_result-hit.html",
+		"oAP": "/dist/_result-hit.html",
 		"oF": 0
 		},
-	"\/src\/_result-ignored.kit": {
+	"/src/_result-ignored.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_result-ignored.html",
+		"oAP": "/dist/_result-ignored.html",
 		"oF": 0
 		},
-	"\/src\/_result-miss.kit": {
+	"/src/_result-miss.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_result-miss.html",
+		"oAP": "/dist/_result-miss.html",
 		"oF": 0
 		},
-	"\/src\/_result-revalidated.kit": {
+	"/src/_result-revalidated.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_result-revalidated.html",
+		"oAP": "/dist/_result-revalidated.html",
 		"oF": 0
 		},
-	"\/src\/_result-stale.kit": {
+	"/src/_result-stale.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_result-stale.html",
+		"oAP": "/dist/_result-stale.html",
 		"oF": 0
 		},
-	"\/src\/_result-updating.kit": {
+	"/src/_result-updating.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_result-updating.html",
+		"oAP": "/dist/_result-updating.html",
 		"oF": 0
 		},
-	"\/src\/_result-waiting.kit": {
+	"/src/_result-waiting.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_result-waiting.html",
+		"oAP": "/dist/_result-waiting.html",
 		"oF": 0
 		},
-	"\/src\/_result.kit": {
+	"/src/_result.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_result.html",
+		"oAP": "/dist/_result.html",
 		"oF": 0
 		},
-	"\/src\/_search-bar.kit": {
+	"/src/_search-bar.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 1,
-		"oAP": "\/dist\/_search-bar.html",
+		"oAP": "/dist/_search-bar.html",
 		"oF": 0
 		},
-	"\/src\/android-chrome-144x144.png": {
+	"/src/android-chrome-144x144.png": {
 		"ft": 32768,
 		"iS": 824,
 		"oA": 1,
-		"oAP": "\/dist\/android-chrome-144x144.png",
+		"oAP": "/dist/android-chrome-144x144.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/android-chrome-192x192.png": {
+	"/src/android-chrome-192x192.png": {
 		"ft": 32768,
 		"iS": 1014,
 		"oA": 1,
-		"oAP": "\/dist\/android-chrome-192x192.png",
+		"oAP": "/dist/android-chrome-192x192.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/android-chrome-256x256.png": {
+	"/src/android-chrome-256x256.png": {
 		"ft": 32768,
 		"iS": 1203,
 		"oA": 1,
-		"oAP": "\/dist\/android-chrome-256x256.png",
+		"oAP": "/dist/android-chrome-256x256.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/android-chrome-36x36.png": {
+	"/src/android-chrome-36x36.png": {
 		"ft": 32768,
 		"iS": 561,
 		"oA": 1,
-		"oAP": "\/dist\/android-chrome-36x36.png",
+		"oAP": "/dist/android-chrome-36x36.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/android-chrome-384x384.png": {
+	"/src/android-chrome-384x384.png": {
 		"ft": 32768,
 		"iS": 1683,
 		"oA": 1,
-		"oAP": "\/dist\/android-chrome-384x384.png",
+		"oAP": "/dist/android-chrome-384x384.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/android-chrome-48x48.png": {
+	"/src/android-chrome-48x48.png": {
 		"ft": 32768,
 		"iS": 625,
 		"oA": 1,
-		"oAP": "\/dist\/android-chrome-48x48.png",
+		"oAP": "/dist/android-chrome-48x48.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/android-chrome-512x512.png": {
+	"/src/android-chrome-512x512.png": {
 		"ft": 32768,
 		"iS": 2002,
 		"oA": 1,
-		"oAP": "\/dist\/android-chrome-512x512.png",
+		"oAP": "/dist/android-chrome-512x512.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/android-chrome-72x72.png": {
+	"/src/android-chrome-72x72.png": {
 		"ft": 32768,
 		"iS": 621,
 		"oA": 1,
-		"oAP": "\/dist\/android-chrome-72x72.png",
+		"oAP": "/dist/android-chrome-72x72.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/android-chrome-96x96.png": {
+	"/src/android-chrome-96x96.png": {
 		"ft": 32768,
 		"iS": 645,
 		"oA": 1,
-		"oAP": "\/dist\/android-chrome-96x96.png",
+		"oAP": "/dist/android-chrome-96x96.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-114x114-precomposed.png": {
+	"/src/apple-touch-icon-114x114-precomposed.png": {
 		"ft": 32768,
 		"iS": 869,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-114x114-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-114x114-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-114x114.png": {
+	"/src/apple-touch-icon-114x114.png": {
 		"ft": 32768,
 		"iS": 693,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-114x114.png",
+		"oAP": "/dist/apple-touch-icon-114x114.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-120x120-precomposed.png": {
+	"/src/apple-touch-icon-120x120-precomposed.png": {
 		"ft": 32768,
 		"iS": 895,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-120x120-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-120x120-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-120x120.png": {
+	"/src/apple-touch-icon-120x120.png": {
 		"ft": 32768,
 		"iS": 700,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-120x120.png",
+		"oAP": "/dist/apple-touch-icon-120x120.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-144x144-precomposed.png": {
+	"/src/apple-touch-icon-144x144-precomposed.png": {
 		"ft": 32768,
 		"iS": 1023,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-144x144-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-144x144-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-144x144.png": {
+	"/src/apple-touch-icon-144x144.png": {
 		"ft": 32768,
 		"iS": 743,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-144x144.png",
+		"oAP": "/dist/apple-touch-icon-144x144.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-152x152-precomposed.png": {
+	"/src/apple-touch-icon-152x152-precomposed.png": {
 		"ft": 32768,
 		"iS": 1006,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-152x152-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-152x152-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-152x152.png": {
+	"/src/apple-touch-icon-152x152.png": {
 		"ft": 32768,
 		"iS": 786,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-152x152.png",
+		"oAP": "/dist/apple-touch-icon-152x152.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-180x180-precomposed.png": {
+	"/src/apple-touch-icon-180x180-precomposed.png": {
 		"ft": 32768,
 		"iS": 1162,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-180x180-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-180x180-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-180x180.png": {
+	"/src/apple-touch-icon-180x180.png": {
 		"ft": 32768,
 		"iS": 908,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-180x180.png",
+		"oAP": "/dist/apple-touch-icon-180x180.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-57x57-precomposed.png": {
+	"/src/apple-touch-icon-57x57-precomposed.png": {
 		"ft": 32768,
 		"iS": 700,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-57x57-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-57x57-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-57x57.png": {
+	"/src/apple-touch-icon-57x57.png": {
 		"ft": 32768,
 		"iS": 550,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-57x57.png",
+		"oAP": "/dist/apple-touch-icon-57x57.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-60x60-precomposed.png": {
+	"/src/apple-touch-icon-60x60-precomposed.png": {
 		"ft": 32768,
 		"iS": 645,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-60x60-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-60x60-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-60x60.png": {
+	"/src/apple-touch-icon-60x60.png": {
 		"ft": 32768,
 		"iS": 535,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-60x60.png",
+		"oAP": "/dist/apple-touch-icon-60x60.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-72x72-precomposed.png": {
+	"/src/apple-touch-icon-72x72-precomposed.png": {
 		"ft": 32768,
 		"iS": 741,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-72x72-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-72x72-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-72x72.png": {
+	"/src/apple-touch-icon-72x72.png": {
 		"ft": 32768,
 		"iS": 600,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-72x72.png",
+		"oAP": "/dist/apple-touch-icon-72x72.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-76x76-precomposed.png": {
+	"/src/apple-touch-icon-76x76-precomposed.png": {
 		"ft": 32768,
 		"iS": 754,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-76x76-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-76x76-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-76x76.png": {
+	"/src/apple-touch-icon-76x76.png": {
 		"ft": 32768,
 		"iS": 601,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-76x76.png",
+		"oAP": "/dist/apple-touch-icon-76x76.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon-precomposed.png": {
+	"/src/apple-touch-icon-precomposed.png": {
 		"ft": 32768,
 		"iS": 1162,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon-precomposed.png",
+		"oAP": "/dist/apple-touch-icon-precomposed.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/apple-touch-icon.png": {
+	"/src/apple-touch-icon.png": {
 		"ft": 32768,
 		"iS": 908,
 		"oA": 1,
-		"oAP": "\/dist\/apple-touch-icon.png",
+		"oAP": "/dist/apple-touch-icon.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/browserconfig.xml": {
+	"/src/browserconfig.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/browserconfig.xml",
+		"oAP": "/dist/browserconfig.xml",
 		"oF": 0
 		},
-	"\/src\/favicon-16x16.png": {
+	"/src/favicon-16x16.png": {
 		"ft": 32768,
 		"iS": 441,
 		"oA": 1,
-		"oAP": "\/dist\/favicon-16x16.png",
+		"oAP": "/dist/favicon-16x16.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/favicon-32x32.png": {
+	"/src/favicon-32x32.png": {
 		"ft": 32768,
 		"iS": 509,
 		"oA": 1,
-		"oAP": "\/dist\/favicon-32x32.png",
+		"oAP": "/dist/favicon-32x32.png",
 		"oF": 1,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/favicon.ico": {
+	"/src/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/dist\/favicon.ico",
+		"oAP": "/dist/favicon.ico",
 		"oF": 1
 		},
-	"\/src\/index.kit": {
+	"/src/index.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"oA": 0,
-		"oAP": "\/dist\/index.php",
+		"oAP": "/dist/index.php",
 		"oF": 2
 		},
-	"\/src\/js\/index.js": {
+	"/src/js/index.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/dist\/js\/index.js",
+		"oAP": "/dist/js/index.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/src\/mstile-144x144.png": {
+	"/src/mstile-144x144.png": {
 		"ft": 32768,
 		"iS": 824,
 		"oA": 0,
-		"oAP": "\/dist\/mstile-144x144.png",
+		"oAP": "/dist/mstile-144x144.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/mstile-150x150.png": {
+	"/src/mstile-150x150.png": {
 		"ft": 32768,
 		"iS": 850,
 		"oA": 0,
-		"oAP": "\/dist\/mstile-150x150.png",
+		"oAP": "/dist/mstile-150x150.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/mstile-310x150.png": {
+	"/src/mstile-310x150.png": {
 		"ft": 32768,
 		"iS": 965,
 		"oA": 0,
-		"oAP": "\/dist\/mstile-310x150.png",
+		"oAP": "/dist/mstile-310x150.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/mstile-310x310.png": {
+	"/src/mstile-310x310.png": {
 		"ft": 32768,
 		"iS": 1607,
 		"oA": 0,
-		"oAP": "\/dist\/mstile-310x310.png",
+		"oAP": "/dist/mstile-310x310.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/mstile-70x70.png": {
+	"/src/mstile-70x70.png": {
 		"ft": 32768,
 		"iS": 720,
 		"oA": 0,
-		"oAP": "\/dist\/mstile-70x70.png",
+		"oAP": "/dist/mstile-70x70.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/src\/result-details.php": {
+	"/src/result-details.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/result-details.php",
+		"oAP": "/dist/result-details.php",
 		"oF": 0
 		},
-	"\/src\/result-not-cloudflare.php": {
+	"/src/result-not-cloudflare.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/result-not-cloudflare.php",
+		"oAP": "/dist/result-not-cloudflare.php",
 		"oF": 0
 		},
-	"\/src\/safari-pinned-tab.svg": {
+	"/src/safari-pinned-tab.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 0,
-		"oAP": "\/dist\/safari-pinned-tab.svg",
+		"oAP": "/dist/safari-pinned-tab.svg",
 		"oF": 0,
 		"opt": 1,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/src\/scss\/.sass-cache\/00a0fc394bd70a4277f6faa400718d6205ff2af4\/materialize.scssc": {
+	"/src/scss/.sass-cache/00a0fc394bd70a4277f6faa400718d6205ff2af4/materialize.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/scss\/.sass-cache\/00a0fc394bd70a4277f6faa400718d6205ff2af4\/materialize.scssc",
+		"oAP": "/dist/scss/.sass-cache/00a0fc394bd70a4277f6faa400718d6205ff2af4/materialize.scssc",
 		"oF": 0
 		},
-	"\/src\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/material-icons.scssc": {
+	"/src/scss/.sass-cache/2cc9129cd791bcb10ee9913aa664169622ee1f04/material-icons.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/material-icons.scssc",
+		"oAP": "/dist/scss/.sass-cache/2cc9129cd791bcb10ee9913aa664169622ee1f04/material-icons.scssc",
 		"oF": 0
 		},
-	"\/src\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/materialize.scssc": {
+	"/src/scss/.sass-cache/2cc9129cd791bcb10ee9913aa664169622ee1f04/materialize.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/scss\/.sass-cache\/2cc9129cd791bcb10ee9913aa664169622ee1f04\/materialize.scssc",
+		"oAP": "/dist/scss/.sass-cache/2cc9129cd791bcb10ee9913aa664169622ee1f04/materialize.scssc",
 		"oF": 0
 		},
-	"\/src\/scss\/.sass-cache\/40e7660e7998f911577e33adb989d363364143c4\/materialize.scssc": {
+	"/src/scss/.sass-cache/40e7660e7998f911577e33adb989d363364143c4/materialize.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/scss\/.sass-cache\/40e7660e7998f911577e33adb989d363364143c4\/materialize.scssc",
+		"oAP": "/dist/scss/.sass-cache/40e7660e7998f911577e33adb989d363364143c4/materialize.scssc",
 		"oF": 0
 		},
-	"\/src\/scss\/fonts\/material-icons.woff2": {
+	"/src/scss/fonts/material-icons.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/css\/fonts\/material-icons.woff2",
+		"oAP": "/dist/css/fonts/material-icons.woff2",
 		"oF": 2
 		},
-	"\/src\/scss\/material-icons.scss": {
+	"/src/scss/material-icons.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -661,12 +661,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/material-icons.css",
+		"oAP": "/dist/css/material-icons.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/src\/scss\/materialize.scss": {
+	"/src/scss/materialize.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -674,12 +674,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/materialize.css",
+		"oAP": "/dist/css/materialize.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 0
 		},
-	"\/src\/scss\/normalize.scss": {
+	"/src/scss/normalize.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -687,12 +687,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/normalize.css",
+		"oAP": "/dist/css/normalize.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/src\/scss\/style.scss": {
+	"/src/scss/style.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -700,37 +700,37 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/style.css",
+		"oAP": "/dist/css/style.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/src\/site.webmanifest": {
+	"/src/site.webmanifest": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/site.webmanifest",
+		"oAP": "/dist/site.webmanifest",
 		"oF": 0
 		},
-	"\/src\/test-timed-out.php": {
+	"/src/test-timed-out.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/test-timed-out.php",
+		"oAP": "/dist/test-timed-out.php",
 		"oF": 0
 		},
-	"\/src\/test-was-done.php": {
+	"/src/test-was-done.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/test-was-done.php",
+		"oAP": "/dist/test-was-done.php",
 		"oF": 0
 		},
-	"\/src\/test-was-not-done.html": {
+	"/src/test-was-not-done.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/dist\/test-was-not-done.html",
+		"oAP": "/dist/test-was-not-done.html",
 		"oF": 0
 		}
 	},
@@ -742,150 +742,103 @@
 	"creationDate": 555994416,
 	"displayValue": "CF-Cache-Status",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "\/src\/apple-touch-icon-114x114-precomposed.png",
+	"iconImageName": "/src/apple-touch-icon-114x114-precomposed.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 556569213
+	"lastBuiltDate": 560291323.53736603
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
-	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"autoprefixerEnableIEGrid": 0,
+	"babel7PresetType": 1,
+	"babelAllowRCFiles": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
-	"babelConfigFileHandlingType": 0,
+	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"arrow-functions": {
+			"active": 0
+			},
 		"async-generator-functions": {
 			"active": 0
 			},
 		"async-to-generator": {
 			"active": 0
 			},
-		"async-to-module-method": {
+		"block-scoped-functions": {
+			"active": 0
+			},
+		"block-scoping": {
 			"active": 0
 			},
 		"class-properties": {
 			"active": 0
 			},
+		"classes": {
+			"active": 0
+			},
+		"computed-properties": {
+			"active": 0
+			},
 		"decorators": {
 			"active": 0
 			},
-		"decorators-legacy": {
+		"destructuring": {
 			"active": 0
 			},
 		"do-expressions": {
 			"active": 0
 			},
-		"es2015-arrow-functions": {
+		"dotall-regex": {
 			"active": 0
 			},
-		"es2015-block-scoped-functions": {
-			"active": 0
-			},
-		"es2015-block-scoping": {
-			"active": 0
-			},
-		"es2015-classes": {
-			"active": 0
-			},
-		"es2015-computed-properties": {
-			"active": 0
-			},
-		"es2015-constants": {
-			"active": 0
-			},
-		"es2015-destructuring": {
-			"active": 0
-			},
-		"es2015-duplicate-keys": {
-			"active": 0
-			},
-		"es2015-for-of": {
-			"active": 0
-			},
-		"es2015-function-name": {
-			"active": 0
-			},
-		"es2015-literals": {
-			"active": 0
-			},
-		"es2015-modules-amd": {
-			"active": 0
-			},
-		"es2015-modules-commonjs": {
-			"active": 0
-			},
-		"es2015-modules-systemjs": {
-			"active": 0
-			},
-		"es2015-modules-umd": {
-			"active": 0
-			},
-		"es2015-object-super": {
-			"active": 0
-			},
-		"es2015-parameters": {
-			"active": 0
-			},
-		"es2015-shorthand-properties": {
-			"active": 0
-			},
-		"es2015-spread": {
-			"active": 0
-			},
-		"es2015-sticky-regex": {
-			"active": 0
-			},
-		"es2015-template-literals": {
-			"active": 0
-			},
-		"es2015-typeof-symbol": {
-			"active": 0
-			},
-		"es2015-unicode-regex": {
-			"active": 0
-			},
-		"es3-member-expression-literals": {
-			"active": 0
-			},
-		"es3-property-literals": {
-			"active": 0
-			},
-		"es5-property-mutators": {
-			"active": 0
-			},
-		"eval": {
+		"duplicate-keys": {
 			"active": 0
 			},
 		"exponentiation-operator": {
 			"active": 0
 			},
-		"export-extensions": {
+		"export-default-from": {
+			"active": 0
+			},
+		"export-namespace-from": {
 			"active": 0
 			},
 		"external-helpers": {
 			"active": 0
 			},
-		"flow-comments": {
+		"flow-strip-types": {
 			"active": 0
 			},
-		"flow-strip-types": {
+		"for-of": {
 			"active": 0
 			},
 		"function-bind": {
 			"active": 0
 			},
-		"inline-environment-variables": {
+		"function-name": {
+			"active": 0
+			},
+		"function-sent": {
+			"active": 0
+			},
+		"instanceof": {
 			"active": 0
 			},
 		"jscript": {
+			"active": 0
+			},
+		"literals": {
+			"active": 0
+			},
+		"logical-assignment-operators": {
 			"active": 0
 			},
 		"member-expression-literals": {
@@ -897,7 +850,28 @@
 		"minify-booleans": {
 			"active": 0
 			},
+		"modules-amd": {
+			"active": 0
+			},
+		"modules-commonjs": {
+			"active": 0
+			},
+		"modules-systemjs": {
+			"active": 0
+			},
+		"modules-umd": {
+			"active": 0
+			},
+		"new-target": {
+			"active": 0
+			},
 		"node-env-inline": {
+			"active": 0
+			},
+		"nullish-coalescing-operator": {
+			"active": 0
+			},
+		"numeric-separator": {
 			"active": 0
 			},
 		"object-assign": {
@@ -909,7 +883,25 @@
 		"object-set-prototype-of-to-assign": {
 			"active": 0
 			},
+		"object-super": {
+			"active": 0
+			},
+		"optional-catch-binding": {
+			"active": 0
+			},
+		"optional-chaining": {
+			"active": 0
+			},
+		"parameters": {
+			"active": 0
+			},
+		"pipeline-operator": {
+			"active": 0
+			},
 		"property-literals": {
+			"active": 0
+			},
+		"property-mutators": {
 			"active": 0
 			},
 		"proto-to-assign": {
@@ -945,53 +937,46 @@
 		"remove-debugger": {
 			"active": 0
 			},
+		"reserved-words": {
+			"active": 0
+			},
 		"runtime": {
+			"active": 0
+			},
+		"shorthand-properties": {
 			"active": 0
 			},
 		"simplify-comparison-operators": {
 			"active": 0
 			},
+		"spread": {
+			"active": 0
+			},
+		"sticky-regex": {
+			"active": 0
+			},
 		"strict-mode": {
 			"active": 0
 			},
-		"syntax-async-generators": {
+		"template-literals": {
 			"active": 0
 			},
-		"syntax-class-properties": {
+		"throw-expressions": {
 			"active": 0
 			},
-		"syntax-decorators": {
-			"active": 0
-			},
-		"syntax-do-expressions": {
-			"active": 0
-			},
-		"syntax-export-extensions": {
-			"active": 0
-			},
-		"syntax-flow": {
-			"active": 0
-			},
-		"syntax-function-bind": {
-			"active": 0
-			},
-		"syntax-function-sent": {
-			"active": 0
-			},
-		"syntax-jsx": {
-			"active": 0
-			},
-		"syntax-object-rest-spread": {
-			"active": 0
-			},
-		"undeclared-variables-check": {
+		"typeof-symbol": {
 			"active": 0
 			},
 		"undefined-to-void": {
 			"active": 0
+			},
+		"unicode-property-regex": {
+			"active": 0
+			},
+		"unicode-regex": {
+			"active": 0
 			}
 		},
-	"babelPresetType": 193,
 	"babelRetainLines": 0,
 	"bowerAbbreviatedPath": "bower_components",
 	"bowerAutoCreateInfoFile": 1,
@@ -1000,6 +985,7 @@
 	"bowerSaveDevDependencies": 0,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
+	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 1,
 	"buildFolderName": "dist",
 	"cleanBuild": 1,
@@ -1357,6 +1343,10 @@
 			"active": 0,
 			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
+		"max-classes-per-file": {
+			"active": 0,
+			"optionString": "1"
+			},
 		"max-depth": {
 			"active": 0,
 			"optionString": "{'max': 4}"
@@ -1368,6 +1358,10 @@
 		"max-lines": {
 			"active": 0,
 			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
+		"max-lines-per-function": {
+			"active": 0,
+			"optionString": "{'max': 50, 'skipBlankLines': true, 'skipComments': true, 'IIFEs': false}"
 			},
 		"max-nested-callbacks": {
 			"active": 0,
@@ -1413,6 +1407,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-async-promise-executor": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-await-in-loop": {
 			"active": 0,
 			"optionString": ""
@@ -1431,10 +1429,6 @@
 			},
 		"no-case-declarations": {
 			"active": 1,
-			"optionString": ""
-			},
-		"no-catch-shadow": {
-			"active": 0,
 			"optionString": ""
 			},
 		"no-class-assign": {
@@ -1633,9 +1627,13 @@
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
 			},
+		"no-misleading-character-class": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-mixed-operators": {
 			"active": 0,
-			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
+			"optionString": "{'groups': [['+', '-', '*', '/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -1989,6 +1987,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-object-spread": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
@@ -2017,6 +2019,10 @@
 			"active": 0,
 			"optionString": "'always'"
 			},
+		"require-atomic-updates": {
+			"active": 0,
+			"optionString": ""
+			},
 		"require-await": {
 			"active": 0,
 			"optionString": ""
@@ -2024,6 +2030,10 @@
 		"require-jsdoc": {
 			"active": 0,
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false, 'ArrowFunctionExpression': false}}"
+			},
+		"require-unicode-regexp": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-yield": {
 			"active": 1,
@@ -2079,7 +2089,7 @@
 			},
 		"spaced-comment": {
 			"active": 0,
-			"optionString": "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
+			"optionString": "'always', {'line': {'markers': ['/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
 			},
 		"strict": {
 			"active": 0,
@@ -2139,7 +2149,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888\/CF-Cache-Status\/dist\/",
+	"externalServerAddress": "http://localhost:8888/CF-Cache-Status/dist/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -2534,7 +2544,6 @@
 		"escapeHTMLCharacters": 0,
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
-		"outputStyle": 0,
 		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
@@ -2553,7 +2562,7 @@
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "\/min",
+		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
@@ -2585,19 +2594,19 @@
 		"allowInsecureImports": 0,
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
-		"disableJavascript": 0,
+		"enableJavascript": 0,
 		"ieCompatibility": 1,
+		"mathStyle": 0,
 		"outputStyle": 0,
-		"relativeURLS": 0,
+		"rewriteURLStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"strictImports": 0,
-		"strictMath": 0,
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
@@ -2653,7 +2662,7 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -2682,7 +2691,7 @@
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
@@ -2706,36 +2715,70 @@
 	"languageDefaultsTS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "\/js",
+		"autoOutputPathRelativePath": "/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
-		"jsxMode": 0,
 		"minifyOutput": 0,
 		"moduleResolutionType": 0,
 		"moduleType": 2,
-		"noImplicitAny": 0,
-		"preserveConstEnums": 0,
 		"removeComments": 0,
-		"suppressImplicitAnyIndexErrors": 0,
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "src",
 	"susyVersion": 3,
+	"tsAllowSyntheticDefaultImports": 0,
+	"tsAllowUnreachableCode": 0,
+	"tsAllowUnusedLabels": 0,
+	"tsAlwaysStrict": 0,
+	"tsDownlevelIteration": 0,
+	"tsEmitBOM": 0,
+	"tsEmitDecoratorMetadata": 0,
+	"tsESModuleInterop": 0,
+	"tsForceConsistentCasingInFileNames": 0,
+	"tsImportHelpers": 0,
+	"tsIsolatedModules": 0,
+	"tsJSXFactory": "React.createElement",
+	"tsKeyofStringsOnly": 0,
+	"tsNoEmitHelpers": 0,
+	"tsNoFallthroughCasesInSwitch": 0,
+	"tsNoImplicitAny": 0,
+	"tsNoImplicitReturns": 0,
+	"tsNoImplicitThis": 0,
+	"tsNoImplicitUseStrict": 0,
+	"tsNoLib": 0,
+	"tsNoResolve": 0,
+	"tsNoStrictGenericChecks": 0,
+	"tsNoUnusedLocals": 0,
+	"tsNoUnusedParameters": 0,
+	"tsPreserveConstEnums": 0,
+	"tsPreserveSymlinks": 0,
+	"tsResolveJsonModule": 0,
+	"tsSkipLibCheck": 0,
+	"tsStrictFunctionTypes": 0,
+	"tsStrictNullChecks": 0,
+	"tsStrictPropertyInitialization": 0,
+	"tsStripInternal": 0,
+	"tsSuppressExcessPropertyErrors": 0,
+	"tsSuppressImplicitAnyIndexErrors": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
-		"ascii-only": {
+		"arguments": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"bare-returns": {
+		"bare_returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2743,11 +2786,11 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"bracketize": {
+		"braces": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"cascade": {
+		"collapse_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -2771,6 +2814,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"directives": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"drop_console": {
 			"active": 0,
 			"flagValue": -1
@@ -2787,7 +2834,15 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"expression": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -2795,20 +2850,32 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"if_return": {
+		"html5_comments": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-level": {
+		"ie8": {
 			"active": 0,
-			"flagValue": 4
+			"flagValue": -1
+			},
+		"if_return": {
+			"active": 1,
+			"flagValue": -1
 			},
 		"indent-start": {
 			"active": 0,
 			"flagValue": 0
 			},
-		"inline-script": {
+		"indent_level": {
 			"active": 0,
+			"flagValue": 4
+			},
+		"inline": {
+			"active": 1,
+			"flagValue": 3
+			},
+		"inline_script": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"join_vars": {
@@ -2823,6 +2890,14 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"keep_infinity": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_quoted_props": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -2831,12 +2906,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"max-line-len": {
+		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
 			},
 		"negate_iife": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"passes": {
+			"active": 1,
+			"flagValue": 1
+			},
+		"preserve_line": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"properties": {
@@ -2847,11 +2930,19 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"quote-keys": {
+		"quote_keys": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"screw-ie8": {
+		"quote_style": {
+			"active": 1,
+			"flagValue": 0
+			},
+		"reduce_funcs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"reduce_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -2863,23 +2954,51 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"sort": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"space-colon": {
+		"shebang": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"support-ie8": {
-			"active": 0,
+		"side_effects": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"switches": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"toplevel": {
 			"active": 0,
 			"flagValue": -1
 			},
+		"typeofs": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_comps": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_Function": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_regexp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_undefined": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2891,9 +3010,17 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"webkit": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"width": {
 			"active": 1,
 			"flagValue": 80
+			},
+		"wrap_iife": {
+			"active": 0,
+			"flagValue": -1
 			}
 		},
 	"uglifyReservedNamesString": "$",
