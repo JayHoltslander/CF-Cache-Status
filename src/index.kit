@@ -1,3 +1,9 @@
+<!-- 
+ADD FEATURE TO LOOK FOR:
+"Cf-Bgj: string"
+"Cf-Polished: string" 
+ -->
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
